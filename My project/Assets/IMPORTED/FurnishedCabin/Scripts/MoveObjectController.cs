@@ -19,7 +19,7 @@ public class MoveObjectController : MonoBehaviour
 	private int rayLayerMask; 
 
 
-	void Start()
+	/*void Start()
 	{
 		//Initialize moveDrawController if script is enabled.
 		player = GameObject.FindGameObjectWithTag("Player");
@@ -142,7 +142,7 @@ public class MoveObjectController : MonoBehaviour
 			
 		return rtnVal;
 
-	}
+	}*/
 		
 
 	#region GUI Config
