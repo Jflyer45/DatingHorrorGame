@@ -42,13 +42,15 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene((int) LevelLoaderUtls.Levels.MainMenu);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneLoaderUtils.Scene.MainMenu);
         Debug.Log("Pressed Menu Button");
     }
 
     public void QuitGame()
     {
         Debug.Log("Pressed Quit Button");
+        Application.Quit();
     }
 
     // Private Methods
