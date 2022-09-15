@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public static bool phoneUIActive = false;
     public GameObject pauseMenuUI;
+    public GameObject phoneUI;
 
     // Update is called once per frame
     void Update()
@@ -20,6 +22,18 @@ public class PauseMenu : MonoBehaviour
             else
             {
                 Pause();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("Pusing p");
+            if (phoneUIActive)
+            {
+                PhoneUIOff();
+            }
+            else
+            {
+                PhoneUIOn();
             }
         }
     }
@@ -38,6 +52,20 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+
+    private void PhoneUIOn()
+    {
+        phoneUI.SetActive(true);
+        EnableCursor();
+        phoneUIActive = true;
+    }
+
+    private void PhoneUIOff()
+    {
+        phoneUI.SetActive(false);
+        DisableCursor();
+        phoneUIActive = false;
     }
 
     public void LoadMenu()
