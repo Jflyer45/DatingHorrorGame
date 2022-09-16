@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SceneLoaderUtils : MonoBehaviour
 {
-    public static class Scene
+    public class Scene
     {
         public const int MainMenu = 0;
         public const int Room = 1;
+        public const int Erik = 2;
     }
 
 }
