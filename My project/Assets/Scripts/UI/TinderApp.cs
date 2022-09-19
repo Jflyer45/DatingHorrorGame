@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class TinderApp : MonoBehaviour
 {
     public Image profilePicture;
+    public Text name;
     public Text profileText;
     public Button rejectButton;
     public Button acceptButton;
@@ -59,5 +60,6 @@ public class TinderApp : MonoBehaviour
         Debug.Log("Switching to " + profile.name);
         profilePicture.sprite = profile.profilePicture;
         profileText.text = profile.bio;
+        name.text = profile.name;
     }
 }
