@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
   m_Name: test1
   m_EditorClassIdentifier: 
-  displayText: asdfasdf
+  displayText: Hello there, would you lke to continue dialogue?
   optionsText:
   - Yes!
   - No!

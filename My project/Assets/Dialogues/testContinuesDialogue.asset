@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
-  m_Name: test2
+  m_Name: testContinuesDialogue
   m_EditorClassIdentifier: 
-  displayText: 
-  optionsText: []
-  optionDialogue: []
+  displayText: Thanks for continuing the dialogue!
+  optionsText:
+  - No problem!
+  - One second thought...
+  optionDialogue:
+  - {fileID: 0}
+  - {fileID: 0}

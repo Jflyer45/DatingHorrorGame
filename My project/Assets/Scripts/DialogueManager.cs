@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI textBox;
     public List<UnityEngine.UI.Button> optionButtons;
     private Dialogue currentDialogue;
-
+    public Dialogue test;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,10 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StartDialogue(test);
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -38,6 +41,7 @@ public class DialogueManager : MonoBehaviour
         // Make any unused buttons invisable
         while (index < optionButtons.Count - 1)
         {
+            // If this doens't work could put them in a empty game object
             optionButtons[index].enabled = false;
             index++;
         }
@@ -53,6 +57,6 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int i)
     {
-
+        StartDialogue(currentDialogue.optionDialogue[i]);
     }
 }

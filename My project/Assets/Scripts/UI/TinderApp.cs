@@ -22,10 +22,10 @@ public class TinderApp : MonoBehaviour
 
         // Will need at some point to populate this with only levels they
         // haven't completed yet. Could have data saved in JSON.
-        TinderProfile test = new TinderProfile("Erik", "person", "Hello my name is erik", SceneLoaderUtils.Scene.Erik);
+        TinderProfile test = new TinderProfile("The Rock", "person", "Hello my name is THE ROCK!", SceneLoaderUtils.Scene.Erik);
         profileLevels.Add(test);
         profileLevels.Add(new TinderProfile("Kevin", "person2",
-            "Kebvin hart lol th some text", SceneLoaderUtils.Scene.Erik));
+            "Kebvin hart I am very funny", SceneLoaderUtils.Scene.Erik));
 
         SwitchProfile(profileLevels[currentIndex]);
     }
