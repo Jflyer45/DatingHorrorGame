@@ -7,5 +7,5 @@ public class Dialogue : ScriptableObject
     public string displayText;
     public string[] optionsText;
     public Dialogue[] optionDialogue;
-
+    public Dialogue nextDialogue;
 }

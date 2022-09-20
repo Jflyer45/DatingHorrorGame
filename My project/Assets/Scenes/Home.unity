@@ -573,9 +573,9 @@ MonoBehaviour:
   UIscreen: {fileID: 963946070}
   textBox: {fileID: 395536479}
   optionButtons:
-  - {fileID: 143855859}
-  - {fileID: 1177071666}
-  - {fileID: 1380811816}
+  - {fileID: 143855855}
+  - {fileID: 1177071662}
+  - {fileID: 1380811815}
   test: {fileID: 11400000, guid: 06dbd41901deca44694c31e86c1707c3, type: 2}
 --- !u!4 &135538449
 Transform:
