@@ -59,8 +59,8 @@ public class DialogueManager : MonoBehaviour
     // Given a dialogue is already in play, use this to change to the next one
     public void ChangeDialouge(Dialogue dialogue)
     {
-        this.textBox.text = currentDialogue.displayText;
         currentDialogue = dialogue;
+        this.textBox.text = currentDialogue.displayText;
         SetUpOptionButtons();
     }
 
@@ -78,6 +78,7 @@ public class DialogueManager : MonoBehaviour
         int index = 0;
         foreach (string optionText in currentDialogue.optionsText)
         {
+            optionButtons[index].SetActive(true);
             optionButtons[index].GetComponentInChildren<Text>().text = optionText;
             index++;
         }
