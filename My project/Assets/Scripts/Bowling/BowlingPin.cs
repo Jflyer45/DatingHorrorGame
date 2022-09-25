@@ -25,8 +25,8 @@ public class BowlingPin : MonoBehaviour
 
     public void ResetPin()
     {
-        gameObject.transform.position = originalPosition;
         gameObject.transform.rotation = originalRotation;
+        gameObject.transform.position = originalPosition;
     }
 
     public bool IsKnockedOver()
