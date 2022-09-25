@@ -10215,7 +10215,7 @@ Animator:
   m_GameObject: {fileID: 989192347142376338}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb79e3fd0dd669f40a90a984b92a0ccf, type: 2}
+  m_Controller: {fileID: 9100000, guid: 32689076df0f43d4f9033e209e00742b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11583,6 +11583,7 @@ GameObject:
   - component: {fileID: 985940057547984072}
   - component: {fileID: 931535332484679790}
   - component: {fileID: 989192347142376339}
+  - component: {fileID: 989192347142376340}
   m_Layer: 0
   m_Name: BasicMotionsDummy
   m_TagString: Untagged
@@ -11608,7 +11609,7 @@ MonoBehaviour:
   umaRecipe: {fileID: 11400000, guid: cbe7b8858a7c17a4d9a80380b49cce27, type: 2}
   umaAdditionalRecipes: []
   umaGenerator: {fileID: 2017248459}
-  animationController: {fileID: 9100000, guid: eb79e3fd0dd669f40a90a984b92a0ccf, type: 2}
+  animationController: {fileID: 9100000, guid: 32689076df0f43d4f9033e209e00742b, type: 2}
   CharacterCreated:
     m_PersistentCalls:
       m_Calls: []
@@ -11867,6 +11868,19 @@ MonoBehaviour:
   customRotation: {x: 0, y: 0, z: 0}
   previewColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   _buildCharacterEnabled: 1
+--- !u!114 &989192347142376340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989192347142376338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89dc18b4a22ca28448ce0f08e7363901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test: 0
 --- !u!1 &989209444927941876
 GameObject:
   m_ObjectHideFlags: 0

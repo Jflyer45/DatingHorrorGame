@@ -5,15 +5,52 @@ using UnityEngine;
 public class DateNPC : MonoBehaviour
 {
     private int moodLevel;
-    void Start()
+    private Animator animator;
+
+    public bool test = false;
+    public bool test2 = false;
+    private void Awake()
     {
+        animator = GetComponent<Animator>();
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (test)
+        {
+            ChangeAnimationToWalk();
+        }
+        else if (test2)
+        {
+            ChangeAnimationToRunning();
+        }
+        else
+        {
+            ChangeAnimationToIdle();
+        }
+    }
+
+    public void ChangeAnimationToWalk()
+    {
+        ResetAnimatorBools();
+        animator.SetBool("isWalking", true);
+    }
+    public void ChangeAnimationToIdle()
+    {
+        ResetAnimatorBools();
+    }
+
+    public void ChangeAnimationToRunning()
+    {
+        ResetAnimatorBools();
+        animator.SetBool("isRunning", true);
+    }
+
+    public void ResetAnimatorBools()
+    {
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isRunning", false);
     }
 
     public int GetMoodLevel()
