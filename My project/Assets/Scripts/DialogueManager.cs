@@ -59,9 +59,16 @@ public class DialogueManager : MonoBehaviour
     // Given a dialogue is already in play, use this to change to the next one
     public void ChangeDialouge(Dialogue dialogue)
     {
-        currentDialogue = dialogue;
-        this.textBox.text = currentDialogue.displayText;
-        SetUpOptionButtons();
+        if (!dialogue)
+        {
+            currentDialogue = dialogue;
+            this.textBox.text = currentDialogue.displayText;
+            SetUpOptionButtons();
+        }
+        else
+        {
+            EndDialogue();
+        }
     }
 
     private void SetUpOptionButtons() 
