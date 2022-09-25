@@ -32,7 +32,6 @@ public class BowlingPin : MonoBehaviour
         float y = WrapAngle(gameObject.transform.eulerAngles.y);
         float z = WrapAngle(gameObject.transform.eulerAngles.z);
 
-        Debug.Log("X:"+x+" Y:"+y+" Z: " + z);
         // Not knocked over if each value is between .45 and -.45
         return (x >= knockedOverAngle || x <= -knockedOverAngle
             || y >= knockedOverAngle || y <= -knockedOverAngle
