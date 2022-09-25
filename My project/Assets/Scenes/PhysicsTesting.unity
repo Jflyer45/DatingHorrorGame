@@ -423,8 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHold: 1
-  item: {fileID: 1477963733}
-  tempParent: {fileID: 0}
+  tempParent: {fileID: 1792698821}
   isHolding: 0
 --- !u!65 &1477963736
 BoxCollider:
@@ -502,6 +501,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1792698821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4094180727597235662, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
+  m_PrefabInstance: {fileID: 727846530}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1838933967
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,8 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHold: 1
-  item: {fileID: 2002258502}
-  tempParent: {fileID: 0}
+  tempParent: {fileID: 1792698821}
   isHolding: 0
 --- !u!65 &2002258504
 BoxCollider:
