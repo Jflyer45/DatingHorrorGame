@@ -5,6 +5,7 @@ using UnityEngine;
 public class BowlingPin : MonoBehaviour
 {
     private Vector3 originalPosition;
+    private Quaternion originalRotation;
     public float knockedOverAngle = 45f;
     public bool isKnockedOver; 
 
@@ -12,6 +13,7 @@ public class BowlingPin : MonoBehaviour
     void Start()
     {
         originalPosition = gameObject.transform.position;
+        originalRotation = gameObject.transform.rotation;
         isKnockedOver = IsKnockedOver();
     }
 
@@ -24,6 +26,7 @@ public class BowlingPin : MonoBehaviour
     public void ResetPin()
     {
         gameObject.transform.position = originalPosition;
+        gameObject.transform.rotation = originalRotation;
     }
 
     public bool IsKnockedOver()
