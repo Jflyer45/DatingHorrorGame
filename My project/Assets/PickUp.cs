@@ -10,12 +10,13 @@ public class PickUp : MonoBehaviour
     Rigidbody itemRigidbody;
 
     public bool canHold = true;
-    public GameObject item;
+    private GameObject item;
     public GameObject tempParent;
     public bool isHolding = false;
 
     private void Start()
     {
+        item = gameObject;
         itemRigidbody = item.GetComponent<Rigidbody>();
     }
 
