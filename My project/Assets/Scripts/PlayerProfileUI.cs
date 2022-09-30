@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.SceneManagement;
 public class PlayerProfileUI : MonoBehaviour
 {
     public PlayerProfile profileSingleton;
@@ -22,5 +23,10 @@ public class PlayerProfileUI : MonoBehaviour
     public void ChangeGetAway()
     {
         profileSingleton.getAway = getAwayBox.itemText.text;
+    }
+
+    public void SumbitButton()
+    {
+        SceneLoaderUtils.ChangeScene(SceneLoaderUtils.Scene.Room);
     }
 }
