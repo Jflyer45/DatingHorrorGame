@@ -51,6 +51,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        Debug.Log("Ending Dialogue");
         TurnOffUI();
         DisableCursor();
         currentDialogue = null;
@@ -59,7 +60,7 @@ public class DialogueManager : MonoBehaviour
     // Given a dialogue is already in play, use this to change to the next one
     public void ChangeDialouge(Dialogue dialogue)
     {
-        if (!dialogue)
+        if (dialogue)
         {
             currentDialogue = dialogue;
             this.textBox.text = currentDialogue.displayText;
@@ -75,6 +76,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentDialogue.optionsText is null || currentDialogue.optionsText.Length == 0)
         {
+            Debug.Log("Click to progess true");
             clickToProgress = true;
         }
         else

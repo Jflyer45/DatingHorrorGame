@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Erik.unity
     guid: ce9c114f43df75f4298818faf33e4d2f
+  - enabled: 1
+    path: Assets/Scenes/Bowling.unity
+    guid: 881bcb3199304fb4abddacb387f65944
   m_configObjects: {}
