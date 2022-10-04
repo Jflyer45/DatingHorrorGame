@@ -14,6 +14,7 @@ public class PlayerProfileUI : MonoBehaviour
     public void ChangePlayerName()
     {
         Debug.Log("Changing name: " + nameBox.text);
+        //PlayerPrefs.SetString("name", nameBox.text); example
         profileSingleton.playerName = nameBox.text;
     }
     public void ChangeFavColor()
