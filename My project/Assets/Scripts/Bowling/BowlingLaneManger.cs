@@ -45,7 +45,7 @@ public class BowlingLaneManger : MonoBehaviour
     // When ball enters the lane
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Lane Collision");
+        //Debug.Log("Lane Collision");
         if(other.tag == "Ball")
         {
             ballInPlay = true;

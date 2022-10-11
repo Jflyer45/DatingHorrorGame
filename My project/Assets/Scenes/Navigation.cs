@@ -7,9 +7,11 @@ public class Navigation : MonoBehaviour
     // Start is called before the first frame update
     private NavMeshAgent nav;
     [SerializeField] GameObject player;
-    [SerializeField] List<Transform> locations;
+    [SerializeField] BowlingLaneRoutes blRoutes;
+    [SerializeField] bool TESTATTACKPLAYER = false;
 
-    [SerializeField] bool test = false;
+    private List<Transform> currentRoute = null;
+    private int routeIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,19 +22,53 @@ public class Navigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //nav.destination = player.transform.position;
-        if (test)
+        if (TESTATTACKPLAYER)
         {
-            FacePlayer();
+            nav.destination = player.transform.position;
         }
         else
         {
-            nav.destination = locations[1].position;
+            Move();
+        }
+    }
+
+    public void ReceiveCommand(string routeKey)
+    {
+        // Route may need to become an object so more data can be stored like if the npc needs to run/walk
+        currentRoute = blRoutes.GetRoutes()[routeKey];
+        routeIndex = 0;
+    }
+
+    private void Move()
+    {
+        // See if there is a route
+        if (currentRoute != null)
+        {
+            // Check if not made it to desination (only checking x & y), else iterate to next location
+            if(nav.transform.position.x != currentRoute[routeIndex].position.x &&
+                nav.transform.position.y != currentRoute[routeIndex].position.y)
+            {
+                nav.destination = currentRoute[routeIndex].position;
+            }
+            else
+            {
+                // Check if at the last location
+                if(routeIndex == currentRoute.Count - 1)
+                {
+                    routeIndex = 0;
+                    currentRoute = null;
+                }
+                else
+                {
+                    routeIndex++;
+                    nav.destination = currentRoute[routeIndex].position;
+                }
+            }
         }
     }
 
     void FacePlayer()
     {
-        nav.destination = player.transform.position;
+        
     }
 }
