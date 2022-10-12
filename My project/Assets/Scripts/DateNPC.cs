@@ -12,7 +12,6 @@ public class DateNPC : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        
     }
 
     private void Update()
@@ -25,14 +24,15 @@ public class DateNPC : MonoBehaviour
         {
             ChangeAnimationToRunning();
         }
-        else
-        {
-            ChangeAnimationToIdle();
-        }
+        //else
+        //{
+           // ChangeAnimationToIdle();
+       // }
     }
 
     public void ChangeAnimationToWalk()
     {
+        Debug.Log("Changing to walkling");
         ResetAnimatorBools();
         animator.SetBool("isWalking", true);
     }
