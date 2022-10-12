@@ -10,6 +10,7 @@ public class Navigation : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] IRoutes routes;
     [SerializeField] bool TESTATTACKPLAYER = false;
+    [SerializeField] GameManager gm;
 
     private List<Transform> currentRoute = null;
     private int routeIndex = 0;
@@ -40,6 +41,7 @@ public class Navigation : MonoBehaviour
         currentRoute = routes.GetRoutes()[routeKey];
         routeIndex = 0;
         self.ChangeAnimationToWalk(); // put this here so that it's only called once
+        NotifyGM(); // We are now moving
     }
 
     private void Move()
@@ -61,6 +63,7 @@ public class Navigation : MonoBehaviour
                     self.ChangeAnimationToIdle();
                     routeIndex = 0;
                     currentRoute = null;
+                    NotifyGM(); // no longer moving
                 }
                 else
                 {
@@ -69,6 +72,21 @@ public class Navigation : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void NotifyGM()
+    {
+        bool state;
+        if(currentRoute == null)
+        {
+            state = false;
+        }
+        else
+        {
+            state = true;
+        }
+
+        gm.UpdateAgentsMovementState(self.name, state);
     }
 
     void FacePlayer()

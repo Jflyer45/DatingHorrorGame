@@ -7,6 +7,7 @@ public class DateNPC : MonoBehaviour
     private int moodLevel;
     private Animator animator;
 
+    public string name;
     public bool test = false;
     public bool test2 = false;
     private void Awake()

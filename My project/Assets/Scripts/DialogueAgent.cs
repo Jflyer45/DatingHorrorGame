@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DialogueAgent : MonoBehaviour
 {
-    public string agentName;
+    // Needs to be abstracted to NPC so that the bartender has access to this
+    public DateNPC self;
     bool inRange = false;
     public GameManager gm;
 
@@ -19,7 +20,7 @@ public class DialogueAgent : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
-            gm.ServeDialogue(agentName);
+            gm.ServeDialogue(self.name);
 
         }
     }

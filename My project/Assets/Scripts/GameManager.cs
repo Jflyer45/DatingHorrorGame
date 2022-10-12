@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public DialogueManager dm;
     public List<Dialogue> dialogues;
 
+    private bool dateNPCMoving = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +55,13 @@ public class GameManager : MonoBehaviour
         {
             return false;
         }        
+    }
+
+    public void UpdateAgentsMovementState(string npcName, bool state)
+    {
+        if(npcName == "erik")
+        {
+            dateNPCMoving = state;
+        }
     }
 }
