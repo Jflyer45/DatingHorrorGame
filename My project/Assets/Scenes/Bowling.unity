@@ -15736,16 +15736,16 @@ MonoBehaviour:
       valuesConverted: 0
   predefinedDNA:
     PreloadValues: []
-  loadPathType: 0
+  loadPathType: 1
   loadPath: 
-  loadFilename: test3.txt
+  loadFilename: fatMan
   loadString: 
   loadFileOnStart: 1
   ForceSlotMaterials: 0
   AtlasResolutionScale: 1
   defaultLoadOptions: 31
   savePathType: 0
-  savePath: 
+  savePath: /Assets
   saveFilename: 
   makeUniqueFilename: 0
   ensureSharedColors: 0
