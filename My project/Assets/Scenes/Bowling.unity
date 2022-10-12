@@ -6542,6 +6542,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1947404671882077668, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
   m_PrefabInstance: {fileID: 1633994696}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1528559079 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1947404671882077669, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
+  m_PrefabInstance: {fileID: 1633994696}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528559077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe61eb70cae57b24b8b4f85ece72d62e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1536773065
 GameObject:
   m_ObjectHideFlags: 0
@@ -6918,6 +6929,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4860944550218573877, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1528559079}
     - target: {fileID: 8324988976491534883, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

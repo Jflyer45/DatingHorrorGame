@@ -9,8 +9,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject UIscreen;
     public TextMeshProUGUI textBox;
     public List<GameObject> optionButtons;
-    private Dialogue currentDialogue;
+    public FPSController playerController;
 
+    private Dialogue currentDialogue;
     private bool clickToProgress = false;
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class DialogueManager : MonoBehaviour
     {
         TurnOnUI();
         EnableCursor();
+        DisablePlayerMovement();
 
         currentDialogue = dialogue;
         this.textBox.text = currentDialogue.displayText;
@@ -50,6 +52,8 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Ending Dialogue");
         TurnOffUI();
         DisableCursor();
+        EnablePlayerMovement();
+
         currentDialogue = null;
     }
 
@@ -123,5 +127,15 @@ public class DialogueManager : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void EnablePlayerMovement()
+    {
+        playerController.canMove = true;
+    }
+
+    private void DisablePlayerMovement()
+    {
+        playerController.canMove = false;
     }
 }
