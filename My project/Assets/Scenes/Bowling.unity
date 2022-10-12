@@ -15522,10 +15522,6 @@ MonoBehaviour:
       _compatibleRaces:
       - HumanMale
       - HumanMaleDCS
-    - _recipeName: FemaleUndies
-      _compatibleRaces:
-      - HumanFemaleDCS
-      - HumanFemale
     - _recipeName: MaleShortHair_Recipe
       _compatibleRaces:
       - HumanMale
@@ -15538,6 +15534,19 @@ MonoBehaviour:
       _compatibleRaces:
       - HumanMaleDCS
       - HumanMale
+    - _recipeName: TallShoes_Black_Recipe
+      _compatibleRaces:
+      - HumanMale
+      - HumanMaleDCS
+      - HumanMaleHighPoly
+    - _recipeName: MaleBeard2
+      _compatibleRaces:
+      - HumanMaleDCS
+      - HumanMale
+    - _recipeName: MaleBrowHR
+      _compatibleRaces:
+      - HumanMale
+      - HumanMaleDCS
   raceAnimationControllers:
     defaultAnimationController: {fileID: 9100000, guid: 32689076df0f43d4f9033e209e00742b, type: 2}
     animators: []
@@ -15547,7 +15556,7 @@ MonoBehaviour:
     _colors:
     - name: Hair
       channelMask:
-      - {r: 0.7264151, g: 0.57967776, b: 0.500267, a: 1}
+      - {r: 0.6132076, g: 0.3897755, b: 0.26900142, a: 1}
       - {r: 1, g: 1, b: 1, a: 1}
       - {r: 1, g: 1, b: 1, a: 1}
       channelAdditiveMask:
@@ -15707,13 +15716,31 @@ MonoBehaviour:
       _metallicGloss: {r: 0, g: 0, b: 0, a: 0}
       Raw: 0
       valuesConverted: 0
+    - name: Shoes
+      channelMask:
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 1, g: 1, b: 1, a: 1}
+      channelAdditiveMask:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      PropertyBlock:
+        alwaysUpdate: 0
+        serializedProperties: []
+      foldout: 0
+      _name: 
+      _color: {r: 1, g: 1, b: 1, a: 1}
+      _metallicGloss: {r: 0, g: 0, b: 0, a: 0}
+      Raw: 0
+      valuesConverted: 0
   predefinedDNA:
     PreloadValues: []
   loadPathType: 0
   loadPath: 
-  loadFilename: 
+  loadFilename: test3.txt
   loadString: 
-  loadFileOnStart: 0
+  loadFileOnStart: 1
   ForceSlotMaterials: 0
   AtlasResolutionScale: 1
   defaultLoadOptions: 31
@@ -15775,7 +15802,7 @@ MonoBehaviour:
   gazeWeight: 0
   gazeMode: 0
   overrideMecanimEyes: 1
-  overrideMecanimJaw: 1
+  overrideMecanimJaw: 0
   overrideMecanimNeck: 0
   overrideMecanimHead: 0
   overrideMecanimHands: 0
