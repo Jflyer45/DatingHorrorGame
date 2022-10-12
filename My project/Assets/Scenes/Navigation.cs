@@ -8,7 +8,7 @@ public class Navigation : MonoBehaviour
     private NavMeshAgent nav;
     [SerializeField] DateNPC self;       // really should be it's own class of movement or something
     [SerializeField] GameObject player;
-    [SerializeField] BowlingLaneRoutes blRoutes;
+    [SerializeField] IRoutes routes;
     [SerializeField] bool TESTATTACKPLAYER = false;
 
     private List<Transform> currentRoute = null;
@@ -37,7 +37,7 @@ public class Navigation : MonoBehaviour
     public void ReceiveCommand(string routeKey)
     {
         // Route may need to become an object so more data can be stored like if the npc needs to run/
-        currentRoute = blRoutes.GetRoutes()[routeKey];
+        currentRoute = routes.GetRoutes()[routeKey];
         routeIndex = 0;
         self.ChangeAnimationToWalk(); // put this here so that it's only called once
     }
