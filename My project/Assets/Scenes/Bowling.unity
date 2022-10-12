@@ -1110,7 +1110,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 929715413}
 --- !u!1 &239178598
 GameObject:
   m_ObjectHideFlags: 0
@@ -4246,7 +4246,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 929715413}
 --- !u!114 &892631680 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9189721857207805998, guid: a93f0a4702ae5ed43bc5afaf5d700eb2, type: 3}
@@ -4363,6 +4363,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 479256, guid: a93f0a4702ae5ed43bc5afaf5d700eb2, type: 3}
   m_PrefabInstance: {fileID: 306247013}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &929715413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2343806411985523979, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
+  m_PrefabInstance: {fileID: 1633994696}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &936763540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4669,7 +4680,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 929715413}
 --- !u!1001 &1037430494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4826,8 +4837,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 0.6, z: 1.51}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.6, y: 0.982763, z: 1.51}
+  m_Center: {x: 0, y: 0.19138148, z: 0}
 --- !u!33 &1058856585
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5325,7 +5336,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 929715413}
 --- !u!1 &1119409288 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 105100, guid: 3acd8ac0ad075614e8d102e3f283dbae, type: 3}
@@ -5363,7 +5374,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 929715413}
 --- !u!1 &1125820226
 GameObject:
   m_ObjectHideFlags: 0
@@ -6826,7 +6837,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 929715413}
 --- !u!1001 &1597315507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7116,7 +7127,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 929715413}
 --- !u!1001 &1655364283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7484,7 +7495,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 929715413}
 --- !u!1001 &1729005442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8593,7 +8604,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 929715413}
 --- !u!1001 &1954769536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9232,7 +9243,7 @@ PrefabInstance:
     - target: {fileID: 1607035085, guid: 606e1e969f2e38744a103b573708dd6b, type: 3}
       propertyPath: crosshair
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 929715413}
     - target: {fileID: 1607035085, guid: 606e1e969f2e38744a103b573708dd6b, type: 3}
       propertyPath: tempParent
       value: 
@@ -9388,6 +9399,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1777879913}
     m_Modifications:
+    - target: {fileID: 1607035085, guid: 606e1e969f2e38744a103b573708dd6b, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 929715413}
     - target: {fileID: 1607035085, guid: 606e1e969f2e38744a103b573708dd6b, type: 3}
       propertyPath: tempParent
       value: 
