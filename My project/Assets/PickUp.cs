@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class PickUp : MonoBehaviour
 {
     public float throwForce = 600;
@@ -13,6 +13,7 @@ public class PickUp : MonoBehaviour
     private GameObject item;
     public GameObject tempParent;
     public bool isHolding = false;
+    public TMP_Text crosshair;
 
     private void Start()
     {
@@ -53,10 +54,26 @@ public class PickUp : MonoBehaviour
         }
     }
 
+    private void CrossHairGlow(bool mode)
+    {
+        if(crosshair != null)
+        {
+            if (mode)
+            {
+                crosshair.color = Color.yellow;
+            }
+            else
+            {
+                crosshair.color = Color.white;
+            }
+        }
+    }
+
     void OnMouseDown()
     {
         if (distance <= 1f)
         {
+            CrossHairGlow(true);
             isHolding = true;
             itemRigidbody.useGravity = false;
             itemRigidbody.detectCollisions = true;
@@ -65,6 +82,7 @@ public class PickUp : MonoBehaviour
 
     void OnMouseUp()
     {
+        CrossHairGlow(false);
         isHolding = false;
     }
 }

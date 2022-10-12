@@ -1110,6 +1110,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
+  crosshair: {fileID: 0}
 --- !u!1 &239178598
 GameObject:
   m_ObjectHideFlags: 0
@@ -4245,6 +4246,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
+  crosshair: {fileID: 0}
 --- !u!114 &892631680 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9189721857207805998, guid: a93f0a4702ae5ed43bc5afaf5d700eb2, type: 3}
@@ -4667,6 +4669,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
+  crosshair: {fileID: 0}
 --- !u!1001 &1037430494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5322,6 +5325,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
+  crosshair: {fileID: 0}
 --- !u!1 &1119409288 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 105100, guid: 3acd8ac0ad075614e8d102e3f283dbae, type: 3}
@@ -5359,6 +5363,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
+  crosshair: {fileID: 0}
 --- !u!1 &1125820226
 GameObject:
   m_ObjectHideFlags: 0
@@ -6821,6 +6826,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
+  crosshair: {fileID: 0}
 --- !u!1001 &1597315507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6940,7 +6946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4815968732577352341, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4860944550218573877, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: playerController
@@ -7086,6 +7092,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
+  crosshair: {fileID: 0}
 --- !u!1001 &1655364283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7453,6 +7460,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
+  crosshair: {fileID: 0}
 --- !u!1001 &1729005442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8561,6 +8569,7 @@ MonoBehaviour:
   canHold: 1
   tempParent: {fileID: 2119161613}
   isHolding: 0
+  crosshair: {fileID: 0}
 --- !u!1001 &1954769536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9196,6 +9205,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1777879913}
     m_Modifications:
+    - target: {fileID: 1607035085, guid: 606e1e969f2e38744a103b573708dd6b, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1607035085, guid: 606e1e969f2e38744a103b573708dd6b, type: 3}
       propertyPath: tempParent
       value: 
