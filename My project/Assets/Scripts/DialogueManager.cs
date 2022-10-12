@@ -10,7 +10,6 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI textBox;
     public List<GameObject> optionButtons;
     private Dialogue currentDialogue;
-    public Dialogue test;
 
     private bool clickToProgress = false;
     // Start is called before the first frame update
@@ -22,10 +21,6 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            StartDialogue(test);
-        }
         if (Input.GetKeyDown(KeyCode.Mouse0) && clickToProgress)
         {
             if(currentDialogue.nextDialogue is null)

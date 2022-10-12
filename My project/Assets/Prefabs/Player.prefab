@@ -870,6 +870,7 @@ Transform:
   - {fileID: 1947404670985833138}
   - {fileID: 1947404672814308888}
   - {fileID: 3900080423008128585}
+  - {fileID: 8797770821812395061}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1503,6 +1504,56 @@ Transform:
   m_Father: {fileID: 1947404672814308888}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4267768854300524372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8797770821812395061}
+  - component: {fileID: 4860944550218573877}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8797770821812395061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4267768854300524372}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1421.8356, y: 692.41455, z: -361.8768}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1947404671882077671}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4860944550218573877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4267768854300524372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5fb023a216f9e428975169669dba20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIscreen: {fileID: 3430628749537141494}
+  textBox: {fileID: 5334571094657462476}
+  optionButtons:
+  - {fileID: 2053181031215993153}
+  - {fileID: 130170465267088769}
+  - {fileID: 8031240389228350548}
+  test: {fileID: 11400000, guid: 06dbd41901deca44694c31e86c1707c3, type: 2}
 --- !u!1 &4619850599032366422
 GameObject:
   m_ObjectHideFlags: 0

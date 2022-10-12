@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DialogueAgent : MonoBehaviour
 {
-    
+    public string agentName;
+    bool inRange = false;
+    public GameManager gm;
 
     // Start is called before the first frame update
     void Start()
@@ -15,20 +17,40 @@ public class DialogueAgent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (inRange && Input.GetKeyDown(KeyCode.F))
+        {
+            gm.ServeDialogue(agentName);
+
+        }
     }
 
     // Visual queue to player they can interact
     void EnableUI()
     {
+        
+    }
+    void DisableUI()
+    {
 
     }
 
+
     private void OnTriggerEnter(Collider other)
+    {
+        //TODO do not allow interaction if NPC is moving.
+        if (other.tag == "Player")
+        {
+            EnableUI();
+            inRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Entered Talking distance");
+            DisableUI();
+            inRange = false;
         }
     }
 }
