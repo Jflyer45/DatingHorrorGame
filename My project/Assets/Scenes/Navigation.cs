@@ -86,11 +86,11 @@ public class Navigation : MonoBehaviour
             state = true;
         }
 
-        gm.UpdateAgentsMovementState(self.name, state);
+        gm.UpdateAgentsMovementState(self.GetName(), state);
     }
 
     void FacePlayer()
     {
-        
+        self.transform.LookAt(player.transform);
     }
 }

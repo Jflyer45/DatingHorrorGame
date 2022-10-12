@@ -20,8 +20,8 @@ public class DialogueAgent : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
+            FacePlayer();
             gm.ServeDialogue(self.name);
-
         }
     }
 
@@ -35,6 +35,10 @@ public class DialogueAgent : MonoBehaviour
 
     }
 
+    private void FacePlayer()
+    {
+        self.transform.LookAt(gm.player.transform);
+    }
 
     private void OnTriggerEnter(Collider other)
     {

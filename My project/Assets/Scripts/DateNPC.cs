@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DateNPC : MonoBehaviour
+public class DateNPC : MonoBehaviour, INPC
 {
     private int moodLevel;
     private Animator animator;
@@ -68,5 +68,11 @@ public class DateNPC : MonoBehaviour
         {
             moodLevel = newLevel;
         }
+    }
+
+    // Getters Setters
+    public string GetName()
+    {
+        return name;
     }
 }

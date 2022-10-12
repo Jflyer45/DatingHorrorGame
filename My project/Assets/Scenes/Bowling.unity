@@ -545,6 +545,7 @@ MonoBehaviour:
   dm: {fileID: 1143345752}
   dialogues:
   - {fileID: 11400000, guid: 06dbd41901deca44694c31e86c1707c3, type: 2}
+  player: {fileID: 1528559077}
 --- !u!1001 &128916471
 PrefabInstance:
   m_ObjectHideFlags: 0

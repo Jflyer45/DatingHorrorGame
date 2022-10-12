@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public Navigation dateNPC;
     public DialogueManager dm;
     public List<Dialogue> dialogues;
+    public GameObject player;
 
     private bool dateNPCMoving = false;
 
