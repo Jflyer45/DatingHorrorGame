@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class DialogueAgent : MonoBehaviour
 {
-    // Needs to be abstracted to NPC so that the bartender has access to this
+    // Needs to be abstracted to NPC so that the bartender has access to 
     public DateNPC self;
+    public TMP_Text rangeIndicator;
     bool inRange = false;
     public GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        DisableUI();
     }
 
     // Update is called once per frame
@@ -22,17 +23,18 @@ public class DialogueAgent : MonoBehaviour
         {
             FacePlayer();
             gm.ServeDialogue(self.name);
+            DisableUI();
         }
     }
 
     // Visual queue to player they can interact
     void EnableUI()
     {
-        
+        rangeIndicator.text = "Press 'f' to speak";
     }
     void DisableUI()
     {
-
+        rangeIndicator.text = "";
     }
 
     private void FacePlayer()
