@@ -19,10 +19,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!dateNPCMoving)
-        {
-            CommandLocation("LaneToBar");
-        }
+        //if (!dateNPCMoving)
+        //{
+            //CommandLocation("LaneToBar");
+        //}
     }
 
     private void CommandLocation(string routeKey)

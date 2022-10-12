@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TurnOffUI();
         
     }
 
@@ -102,6 +103,10 @@ public class DialogueManager : MonoBehaviour
     private void TurnOffUI()
     {
         UIscreen.SetActive(false);
+        optionButtons[0].SetActive(false);
+        optionButtons[1].SetActive(false);
+        optionButtons[2].SetActive(false);
+        textBox.text = "";
     }
 
     public void MakeChoice(int i)
