@@ -15848,7 +15848,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   self: {fileID: 7551989712512706101}
   player: {fileID: 1528559077}
+  routes: {fileID: 247904881}
   TESTATTACKPLAYER: 0
+  gm: {fileID: 107471901}
 --- !u!1 &7551990919613586119
 GameObject:
   m_ObjectHideFlags: 0

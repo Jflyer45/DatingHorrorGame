@@ -8,7 +8,7 @@ public class Navigation : MonoBehaviour
     private NavMeshAgent nav;
     [SerializeField] DateNPC self;       // really should be it's own class of movement or something
     [SerializeField] GameObject player;
-    [SerializeField] IRoutes routes;
+    [SerializeField] BowlingLaneRoutes routes;
     [SerializeField] bool TESTATTACKPLAYER = false;
     [SerializeField] GameManager gm;
 
