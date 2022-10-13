@@ -6,6 +6,7 @@ public class DateNPC : MonoBehaviour, INPC
 {
     public int moodLevel;
     private Animator animator;
+    private UMAMoodSlider moodSlider;
 
     public string name;
     public bool test = false;
@@ -13,6 +14,7 @@ public class DateNPC : MonoBehaviour, INPC
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        moodSlider = GetComponent<UMAMoodSlider>();
     }
 
     private void Update()
@@ -69,6 +71,13 @@ public class DateNPC : MonoBehaviour, INPC
         {
             moodLevel = newLevel;
         }
+
+        SetFacialExpression();
+    }
+
+    private void SetFacialExpression()
+    {
+        moodSlider.mood = moodLevel;
     }
 
     // Getters Setters

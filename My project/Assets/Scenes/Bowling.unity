@@ -15934,6 +15934,7 @@ GameObject:
   - component: {fileID: 7551989712512706100}
   - component: {fileID: 7551989712512706103}
   - component: {fileID: 7551989712512706104}
+  - component: {fileID: 7551989712512706102}
   m_Layer: 0
   m_Name: BasicMotionsDummy
   m_TagString: Untagged
@@ -16037,9 +16038,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89dc18b4a22ca28448ce0f08e7363901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moodLevel: 0
   name: erik
   test: 0
   test2: 0
+--- !u!114 &7551989712512706102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7551989712512706099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0637ff73d58d50e4eb0182eabcb3391d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mood: 0
 --- !u!195 &7551989712512706103
 NavMeshAgent:
   m_ObjectHideFlags: 0
