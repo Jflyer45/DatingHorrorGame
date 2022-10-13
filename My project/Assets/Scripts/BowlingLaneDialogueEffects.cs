@@ -17,7 +17,7 @@ public class BowlingLaneDialogueEffects
         DialoguesWithEffects.Add("Intro", introEffects);
 
         List<DialogueEffect> beforeWePlay = new List<DialogueEffect>();
-        beforeWePlay.Add(new DialogueEffect(0, "LaneToBar"));
+        beforeWePlay.Add(new DialogueEffect(0, "Bar"));
         DialoguesWithEffects.Add("BeforeWePlay", beforeWePlay);
 
         return DialoguesWithEffects;

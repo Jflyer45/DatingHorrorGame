@@ -8,6 +8,7 @@ public class BowlingLaneRoutes : MonoBehaviour, IRoutes
     public List<Transform> SideToLane;
     public List<Transform> LaneToBar;
     public List<Transform> BarToLane;
+    public List<Transform> Bar;
 
     public Dictionary<string, List<Transform>> GetRoutes()
     {
@@ -16,6 +17,7 @@ public class BowlingLaneRoutes : MonoBehaviour, IRoutes
         dic.Add("SideToLane", SideToLane);
         dic.Add("LaneToBar", LaneToBar);
         dic.Add("BarToLane", BarToLane);
+        dic.Add("Bar", Bar);
         return dic;
     }
 }
