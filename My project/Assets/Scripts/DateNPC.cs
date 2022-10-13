@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DateNPC : MonoBehaviour, INPC
 {
-    private int moodLevel;
+    public int moodLevel;
     private Animator animator;
 
     public string name;
@@ -60,7 +60,7 @@ public class DateNPC : MonoBehaviour, INPC
     }
     public void ChangeMoodLevel(int amount)
     {
-        int newLevel = moodLevel - amount;
+        int newLevel = moodLevel + amount;
         if (newLevel >= 4 || newLevel <= -4)
         {
             moodLevel = 0;
