@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Navigation dateNPC;
+    public Navigation dateNPCNav;
+    public DateNPC dateNPC;
     public DialogueManager dm;
     public List<Dialogue> dialogues;
     public GameObject player;
@@ -14,21 +15,18 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CommandLocation("BarToLane");
+        CommandLocation("LaneToSide");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (!dateNPCMoving)
-        //{
-            //CommandLocation("LaneToBar");
-        //}
+        
     }
 
     private void CommandLocation(string routeKey)
     {
-        dateNPC.ReceiveCommand(routeKey);
+        dateNPCNav.ReceiveCommand(routeKey);
     }
 
     private Dialogue NextDialogue(string agentName)
@@ -41,6 +39,25 @@ public class GameManager : MonoBehaviour
         else
         {
             return null;
+        }
+    }
+
+    public void ReceivePlayerChoice(int choice, Dialogue d)
+    {
+        Dictionary<string, List<DialogueEffect>> dialoguesWithEffects = BowlingLaneDialogueEffects.GetDialogueWithEffects();
+
+        Debug.Log("NAME BELOW");
+        Debug.Log(d.name);
+
+        if (dialoguesWithEffects.ContainsKey(d.name))
+        {
+            Debug.Log("Choice: " + choice + " effect: " + dialoguesWithEffects[d.name].ToString());
+            DialogueEffect de = dialoguesWithEffects[d.name][choice];
+            dateNPC.ChangeMoodLevel(de.moodChange);
+            if(de.locationCommand != null)
+            {
+                CommandLocation(de.locationCommand);
+            }
         }
     }
 
@@ -61,6 +78,7 @@ public class GameManager : MonoBehaviour
         }        
     }
 
+    //Used by navigation to tell GM when date npc moving
     public void UpdateAgentsMovementState(string npcName, bool state)
     {
         if(npcName == "erik")

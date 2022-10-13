@@ -545,10 +545,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40433f074d3136747a97892947615e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dateNPC: {fileID: 7551989712512706104}
+  dateNPCNav: {fileID: 7551989712512706104}
+  dateNPC: {fileID: 7551989712512706101}
   dm: {fileID: 1143345752}
   dialogues:
-  - {fileID: 11400000, guid: 06dbd41901deca44694c31e86c1707c3, type: 2}
+  - {fileID: 11400000, guid: 9ceec1d8ba8b5db41b0b9784db1deaf7, type: 2}
   player: {fileID: 1528559077}
 --- !u!1001 &128916471
 PrefabInstance:
@@ -7016,7 +7017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1947404671882077671, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1483335
+      value: -6.03
       objectReference: {fileID: 0}
     - target: {fileID: 1947404671882077671, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7024,7 +7025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1947404671882077671, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.662456
+      value: 15.34
       objectReference: {fileID: 0}
     - target: {fileID: 1947404671882077671, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7074,6 +7075,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4860944550218573877, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 107471901}
     - target: {fileID: 4860944550218573877, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: playerController
       value: 

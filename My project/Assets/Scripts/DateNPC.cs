@@ -58,8 +58,9 @@ public class DateNPC : MonoBehaviour, INPC
     {
         return moodLevel;
     }
-    public void ChangeMoodLevel(int newLevel)
+    public void ChangeMoodLevel(int amount)
     {
+        int newLevel = moodLevel - amount;
         if (newLevel >= 4 || newLevel <= -4)
         {
             moodLevel = 0;

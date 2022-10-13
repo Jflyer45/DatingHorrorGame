@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI textBox;
     public List<GameObject> optionButtons;
     public FPSController playerController;
+    public GameManager gm;
 
     private Dialogue currentDialogue;
     private bool clickToProgress = false;
@@ -115,6 +116,9 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int i)
     {
+        // Notify GM
+        gm.ReceivePlayerChoice(i, currentDialogue);
+
         ChangeDialouge(currentDialogue.optionDialogue[i]);
     }
 
