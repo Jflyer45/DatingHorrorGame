@@ -6,7 +6,7 @@ public class Navigation : MonoBehaviour
 {
     // Start is called before the first frame update
     private NavMeshAgent nav;
-    [SerializeField] DateNPC self;       // really should be it's own class of movement or something
+    private NPC self;
     [SerializeField] GameObject player;
     [SerializeField] Routes routes;
     [SerializeField] bool TESTATTACKPLAYER = false;
@@ -16,9 +16,9 @@ public class Navigation : MonoBehaviour
     private int routeIndex = 0;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        //self = GetComponent<DateNPC>();
+        self = GetComponent<NPC>();
         nav = GetComponent<NavMeshAgent>();
     }
 
