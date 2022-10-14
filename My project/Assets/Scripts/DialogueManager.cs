@@ -77,7 +77,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentDialogue.optionsText is null || currentDialogue.optionsText.Length == 0)
         {
-            Debug.Log("Click to progess true");
             clickToProgress = true;
         }
         else
@@ -92,11 +91,9 @@ public class DialogueManager : MonoBehaviour
             optionButtons[index].GetComponentInChildren<Text>().text = optionText;
             index++;
         }
-        Debug.Log("Index: " + index + " button count: " + optionButtons.Count);
         // Make any unused buttons invisable
         while (index < optionButtons.Count)
         {
-            Debug.Log("Removing button");
             optionButtons[index].SetActive(false);
             index++;
         }
