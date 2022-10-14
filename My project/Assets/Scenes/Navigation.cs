@@ -87,7 +87,7 @@ public class Navigation : MonoBehaviour
             state = true;
         }
 
-        gm.UpdateAgentsMovementState(self.GetName(), state);
+        gm.UpdateAgentsMovementState(self.GetNPCName(), state);
     }
 
     public void AttackPlayer()

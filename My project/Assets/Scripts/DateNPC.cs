@@ -2,58 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DateNPC : MonoBehaviour, INPC
+public class DateNPC : NPC
 {
     public int moodLevel;
-    private Animator animator;
     private UMAMoodSlider moodSlider;
-
-    public string name;
+    
     public bool test = false;
     public bool test2 = false;
+    
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        SetAnimator(GetComponent<Animator>());
         moodSlider = GetComponent<UMAMoodSlider>();
-    }
-
-    private void Update()
-    {
-        if (test)
-        {
-            ChangeAnimationToWalk();
-        }
-        else if (test2)
-        {
-            ChangeAnimationToRunning();
-        }
-        //else
-        //{
-           // ChangeAnimationToIdle();
-       // }
-    }
-
-    public void ChangeAnimationToWalk()
-    {
-        Debug.Log("Changing to walkling");
-        ResetAnimatorBools();
-        animator.SetBool("isWalking", true);
-    }
-    public void ChangeAnimationToIdle()
-    {
-        ResetAnimatorBools();
-    }
-
-    public void ChangeAnimationToRunning()
-    {
-        ResetAnimatorBools();
-        animator.SetBool("isRunning", true);
-    }
-
-    public void ResetAnimatorBools()
-    {
-        animator.SetBool("isWalking", false);
-        animator.SetBool("isRunning", false);
     }
 
     public int GetMoodLevel()
@@ -78,11 +38,5 @@ public class DateNPC : MonoBehaviour, INPC
     private void SetFacialExpression()
     {
         moodSlider.mood = moodLevel;
-    }
-
-    // Getters Setters
-    public string GetName()
-    {
-        return name;
     }
 }

@@ -22,7 +22,7 @@ public class DialogueAgent : MonoBehaviour
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
             FacePlayer();
-            gm.ServeDialogue(self.name);
+            gm.ServeDialogue(self.npcName);
             DisableUI();
         }
     }
