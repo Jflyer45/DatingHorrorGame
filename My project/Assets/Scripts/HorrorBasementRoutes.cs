@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BowlingLaneRoutes : Routes, IRoutes
+public class HorrorBasementRoutes : Routes
 {
     public List<Transform> LaneToSide;
     public List<Transform> SideToLane;

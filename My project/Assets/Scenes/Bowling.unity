@@ -550,8 +550,11 @@ MonoBehaviour:
   dm: {fileID: 1143345752}
   dialogues:
   - {fileID: 11400000, guid: 9ceec1d8ba8b5db41b0b9784db1deaf7, type: 2}
-  - {fileID: 11400000, guid: c1407f559ddfbb047bf952d9ad372f1e, type: 2}
+  - {fileID: 11400000, guid: 8c86cc284405de04e86fc61040c243d8, type: 2}
+  - {fileID: 11400000, guid: 560893fe5a217a74ab16aaa772de0b41, type: 2}
+  - {fileID: 11400000, guid: d716e746fa0f89241aec50e439c7e448, type: 2}
   player: {fileID: 1528559077}
+  attackDialogue: {fileID: 11400000, guid: c1407f559ddfbb047bf952d9ad372f1e, type: 2}
 --- !u!1001 &128916471
 PrefabInstance:
   m_ObjectHideFlags: 0
