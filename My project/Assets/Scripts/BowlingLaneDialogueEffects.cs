@@ -17,8 +17,14 @@ public class BowlingLaneDialogueEffects
         DialoguesWithEffects.Add("Intro", introEffects);
 
         List<DialogueEffect> beforeWePlay = new List<DialogueEffect>();
-        beforeWePlay.Add(new DialogueEffect(0, "Bar"));
+        Dictionary<string, string> beforeWePlayCommandsOption1 = new Dictionary<string, string>();
+        beforeWePlayCommandsOption1.Add("NextDialogueIndex", "2");
+        beforeWePlay.Add(new DialogueEffect(0, "Bar", beforeWePlayCommandsOption1));
         DialoguesWithEffects.Add("BeforeWePlay", beforeWePlay);
+
+        //List<DialogueEffect> horrorEnding = new List<DialogueEffect>();
+        //horrorEnding.Add(new DialogueEffect(0, null, new List<string>() { "attack"}));
+        //DialoguesWithEffects.Add("BeforeWePlay", beforeWePlay);
 
         return DialoguesWithEffects;
     }

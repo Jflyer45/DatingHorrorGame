@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -141,5 +141,10 @@ public class DialogueManager : MonoBehaviour
     private void DisablePlayerMovement()
     {
         playerController.canMove = false;
+    }
+
+    public bool HasActiveDialogue()
+    {
+        if(currentDialogue != null) { return true; } else { return false; }
     }
 }

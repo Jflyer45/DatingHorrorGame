@@ -28,6 +28,7 @@ public class Navigation : MonoBehaviour
         if (TESTATTACKPLAYER)
         {
             nav.destination = player.transform.position;
+            self.ChangeAnimationToRunning();
         }
         else
         {
@@ -87,6 +88,12 @@ public class Navigation : MonoBehaviour
         }
 
         gm.UpdateAgentsMovementState(self.GetName(), state);
+    }
+
+    public void AttackPlayer()
+    {
+        TESTATTACKPLAYER = true;
+        nav.speed = nav.speed * 3;
     }
 
     void FacePlayer()

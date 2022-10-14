@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +8,10 @@ public class GameManager : MonoBehaviour
     public Navigation dateNPCNav;
     public DateNPC dateNPC;
     public DialogueManager dm;
-    public List<Dialogue> dialogues;
+    public List<Dialogue> dialogues; // More specifically conversation starts.
+    private int dateNPCDialogueIndex;
     public GameObject player;
+    public Dialogue attackDialogue;
 
     private bool dateNPCMoving = false;
 
@@ -34,7 +37,7 @@ public class GameManager : MonoBehaviour
         //temp code
         if (agentName == "erik")
         {
-            return dialogues[0];
+            return dialogues[dateNPCDialogueIndex];
         }
         else
         {
@@ -42,6 +45,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void ChangeNextDialogue(int index)
+    {
+        dateNPCDialogueIndex = index;
+    }
+
+    
     public void ReceivePlayerChoice(int choice, Dialogue d)
     {
         Dictionary<string, List<DialogueEffect>> dialoguesWithEffects = BowlingLaneDialogueEffects.GetDialogueWithEffects();
@@ -51,13 +60,42 @@ public class GameManager : MonoBehaviour
 
         if (dialoguesWithEffects.ContainsKey(d.name))
         {
-            Debug.Log("Choice: " + choice + " effect: " + dialoguesWithEffects[d.name].ToString());
             DialogueEffect de = dialoguesWithEffects[d.name][choice];
             dateNPC.ChangeMoodLevel(de.moodChange);
             if(de.locationCommand != null)
             {
                 CommandLocation(de.locationCommand);
             }
+            if (de.commands != null)
+            {
+                DeceiverDialogueCommand(de.commands);
+            }
+        }
+
+        if(dateNPC.moodLevel == -3)
+        {
+            //Serve final message and stop all other dialogue?
+            dm.StartDialogue(attackDialogue);
+            StartCoroutine("AttackPlayer");
+        }
+    }
+
+    IEnumerator AttackPlayer()
+    {
+        yield return new WaitUntil(DialogueNotInPlay);
+        ActivateHorrorAttack();
+    }
+
+    bool DialogueNotInPlay()
+    {
+        return !dm.HasActiveDialogue();
+    }
+
+    private void DeceiverDialogueCommand(Dictionary<string, string> commands)
+    {
+        if (commands.ContainsKey("NextDialogueIndex"))
+        {
+            ChangeNextDialogue(Int32.Parse(commands["NextDialogueIndex"]));
         }
     }
 
@@ -85,5 +123,10 @@ public class GameManager : MonoBehaviour
         {
             dateNPCMoving = state;
         }
+    }
+
+    public void ActivateHorrorAttack()
+    {
+        dateNPCNav.AttackPlayer();
     }
 }
