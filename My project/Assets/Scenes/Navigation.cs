@@ -93,7 +93,8 @@ public class Navigation : MonoBehaviour
     public void AttackPlayer()
     {
         TESTATTACKPLAYER = true;
-        nav.speed = nav.speed * 3;
+        nav.speed = 6;
+        nav.acceleration = 100; //so player cannot juke
     }
 
     void FacePlayer()

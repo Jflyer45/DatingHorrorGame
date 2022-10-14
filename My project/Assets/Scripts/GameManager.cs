@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
     IEnumerator AttackPlayer()
     {
         yield return new WaitUntil(DialogueNotInPlay);
+        yield return new WaitForSeconds(1);
         ActivateHorrorAttack();
     }
 
