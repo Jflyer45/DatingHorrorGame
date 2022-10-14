@@ -55,9 +55,6 @@ public class GameManager : MonoBehaviour
     {
         Dictionary<string, List<DialogueEffect>> dialoguesWithEffects = BowlingLaneDialogueEffects.GetDialogueWithEffects();
 
-        Debug.Log("NAME BELOW");
-        Debug.Log(d.name);
-
         if (dialoguesWithEffects.ContainsKey(d.name))
         {
             DialogueEffect de = dialoguesWithEffects[d.name][choice];

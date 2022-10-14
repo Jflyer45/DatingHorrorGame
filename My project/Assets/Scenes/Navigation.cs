@@ -38,7 +38,6 @@ public class Navigation : MonoBehaviour
 
     public void ReceiveCommand(string routeKey)
     {
-        // Route may need to become an object so more data can be stored like if the npc needs to run/
         currentRoute = routes.GetRoutes()[routeKey];
         routeIndex = 0;
         self.ChangeAnimationToWalk(); // put this here so that it's only called once
@@ -78,15 +77,7 @@ public class Navigation : MonoBehaviour
     private void NotifyGM()
     {
         bool state;
-        if(currentRoute == null)
-        {
-            state = false;
-        }
-        else
-        {
-            state = true;
-        }
-
+        if(currentRoute == null){state = false;}else{state = true;}
         gm.UpdateAgentsMovementState(self.GetNPCName(), state);
     }
 
