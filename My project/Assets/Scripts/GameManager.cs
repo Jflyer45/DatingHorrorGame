@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public Navigation dateNPCNav;
     public DateNPC dateNPC;
+    public SphereCollider dateNPCCollider;
     public DialogueManager dm;
     public List<Dialogue> dialogues; // More specifically conversation starts.
     private int dateNPCDialogueIndex;
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     public Dialogue attackDialogue;
     public MusicController MC;
 
+    public bool jumpscareActive = false;
     private bool dateNPCMoving = false;
 
     // Start is called before the first frame update
@@ -25,7 +27,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void CommandLocation(string routeKey)
@@ -132,5 +134,6 @@ public class GameManager : MonoBehaviour
     public void ActivateHorrorAttack()
     {
         dateNPCNav.AttackPlayer();
+        jumpscareActive = true;
     }
 }

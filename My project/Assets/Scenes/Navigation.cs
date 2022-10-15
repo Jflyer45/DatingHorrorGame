@@ -88,6 +88,12 @@ public class Navigation : MonoBehaviour
         nav.acceleration = 100; //so player cannot juke
     }
 
+    public void StopMoving()
+    {
+        currentRoute = null;
+        nav.ResetPath();
+    }
+
     void FacePlayer()
     {
         self.transform.LookAt(player.transform);
