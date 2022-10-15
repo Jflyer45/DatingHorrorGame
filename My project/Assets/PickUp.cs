@@ -14,6 +14,7 @@ public class PickUp : MonoBehaviour
     public GameObject tempParent;
     public bool isHolding = false;
     public TMP_Text crosshair;
+    public bool wasThrown;
 
     private void Start()
     {
@@ -39,6 +40,7 @@ public class PickUp : MonoBehaviour
 
             if (Input.GetMouseButtonDown(1))
             {
+                StartCoroutine("WasThrown");
                 itemRigidbody.AddForce(tempParent.transform.forward * throwForce);
                 isHolding = false;
             }
@@ -52,6 +54,13 @@ public class PickUp : MonoBehaviour
             itemRigidbody.useGravity = true;
             item.transform.position = objectPos;
         }
+    }
+
+    IEnumerator WasThrown()
+    {
+        wasThrown = true;
+        yield return new WaitForSeconds(1);
+        wasThrown = false;
     }
 
     private void CrossHairGlow(bool mode)

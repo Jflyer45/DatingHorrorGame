@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private int dateNPCDialogueIndex;
     public GameObject player;
     public Dialogue attackDialogue;
+    public MusicController MC;
 
     private bool dateNPCMoving = false;
 
@@ -59,6 +60,11 @@ public class GameManager : MonoBehaviour
         {
             DialogueEffect de = dialoguesWithEffects[d.name][choice];
             dateNPC.ChangeMoodLevel(de.moodChange);
+            if(de.moodChange < 0)
+            {
+                MC.PauseMusic();
+            }
+
             if(de.locationCommand != null)
             {
                 CommandLocation(de.locationCommand);
