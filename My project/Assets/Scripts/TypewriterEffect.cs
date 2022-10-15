@@ -5,16 +5,29 @@ using TMPro;
 public class TypewriterEffect : MonoBehaviour
 {
     public float writingSpeed = 50f;
-
+    private string currentText;
+    private TMP_Text currentTextBox;
+    public bool currentlyTyping = false;
     public void Run(string textToType, TMP_Text textLabel)
     {
         StartCoroutine(TypeText(textToType, textLabel));
     }
 
+    public void FinishEarly()
+    {
+        if (currentlyTyping)
+        {
+            StopCoroutine("TypeText");
+            currentTextBox.text = currentText;
+        }
+    }
+
     private IEnumerator TypeText(string textToType, TMP_Text textLabel)
     {
+        currentlyTyping = true;
         float t = 0;
         int charIndex = 0;
+        currentText = textToType;
 
         while(charIndex < textToType.Length)
         {
@@ -27,5 +40,6 @@ public class TypewriterEffect : MonoBehaviour
             yield return null;
         }
         textLabel.text = textToType;
+        currentlyTyping = false;
     }
 }

@@ -54,6 +54,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("Ending Dialogue");
+        TWE.FinishEarly();
         TurnOffUI();
         DisableCursor();
         EnablePlayerMovement();
