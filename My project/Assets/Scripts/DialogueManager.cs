@@ -12,13 +12,15 @@ public class DialogueManager : MonoBehaviour
     public FPSController playerController;
     public GameManager gm;
 
+    private TypewriterEffect TWE;
     private Dialogue currentDialogue;
     private bool clickToProgress = false;
     // Start is called before the first frame update
     void Start()
     {
+        TWE = GetComponent<TypewriterEffect>();
+        //TWE.Run("This is a test . . . . . .  asdasd . asd test", textBox);
         TurnOffUI();
-        
     }
 
     // Update is called once per frame
@@ -44,7 +46,8 @@ public class DialogueManager : MonoBehaviour
         DisablePlayerMovement();
 
         currentDialogue = dialogue;
-        this.textBox.text = currentDialogue.displayText;
+        //this.textBox.text = currentDialogue.displayText;
+        TWE.Run(currentDialogue.displayText, textBox);
         SetUpOptionButtons();
     }
 
@@ -64,7 +67,8 @@ public class DialogueManager : MonoBehaviour
         if (dialogue)
         {
             currentDialogue = dialogue;
-            this.textBox.text = currentDialogue.displayText;
+            TWE.Run(currentDialogue.displayText, textBox);
+            //this.textBox.text = currentDialogue.displayText;
             SetUpOptionButtons();
         }
         else
