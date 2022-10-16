@@ -17,7 +17,7 @@ public class TypewriterEffect : MonoBehaviour
     {
         if (currentlyTyping)
         {
-            StopCoroutine("TypeText");
+            StopAllCoroutines();
             currentTextBox.text = currentText;
         }
     }
@@ -25,6 +25,7 @@ public class TypewriterEffect : MonoBehaviour
     private IEnumerator TypeText(string textToType, TMP_Text textLabel)
     {
         currentlyTyping = true;
+        currentTextBox = textLabel;
         float t = 0;
         int charIndex = 0;
         currentText = textToType;

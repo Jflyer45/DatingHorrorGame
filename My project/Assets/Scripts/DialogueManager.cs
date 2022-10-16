@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && clickToProgress)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && clickToProgress && !TWE.currentlyTyping)
         {
             if(currentDialogue.nextDialogue is null)
             {
@@ -36,6 +36,10 @@ public class DialogueManager : MonoBehaviour
             {
                 ChangeDialouge(currentDialogue.nextDialogue);
             }
+        }else if (Input.GetKeyDown(KeyCode.Mouse0) && TWE.currentlyTyping)
+        {
+            Debug.Log("TRIED CLICKING TO SKIP");
+            TWE.FinishEarly();
         }
     }
 
