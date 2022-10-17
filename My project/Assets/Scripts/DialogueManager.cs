@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     private TypewriterEffect TWE;
     private Dialogue currentDialogue;
     private bool clickToProgress = false;
+    private bool canDialogue = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,14 +46,17 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        TurnOnUI();
-        EnableCursor();
-        DisablePlayerMovement();
+        if (canDialogue)
+        {
+            TurnOnUI();
+            EnableCursor();
+            DisablePlayerMovement();
 
-        currentDialogue = dialogue;
-        //this.textBox.text = currentDialogue.displayText;
-        TWE.Run(currentDialogue.displayText, textBox);
-        SetUpOptionButtons();
+            currentDialogue = dialogue;
+            //this.textBox.text = currentDialogue.displayText;
+            TWE.Run(currentDialogue.displayText, textBox);
+            SetUpOptionButtons();
+        }
     }
 
     public void EndDialogue()
@@ -152,5 +156,16 @@ public class DialogueManager : MonoBehaviour
     public bool HasActiveDialogue()
     {
         if(currentDialogue != null) { return true; } else { return false; }
+    }
+
+    public void DisableDialogue()
+    {
+        canDialogue = false;
+        
+    }
+
+    public void EnableDialogues()
+    {
+        canDialogue = true;
     }
 }

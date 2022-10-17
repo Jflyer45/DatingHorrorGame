@@ -135,5 +135,6 @@ public class GameManager : MonoBehaviour
     {
         dateNPCNav.AttackPlayer();
         jumpscareActive = true;
+        dm.DisableDialogue();
     }
 }
