@@ -19,6 +19,7 @@ public class TypewriterEffect : MonoBehaviour
         {
             StopAllCoroutines();
             currentTextBox.text = currentText;
+            currentlyTyping = false;
         }
     }
 
