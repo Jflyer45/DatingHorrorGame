@@ -161,7 +161,6 @@ public class DialogueManager : MonoBehaviour
     public void DisableDialogue()
     {
         canDialogue = false;
-        
     }
 
     public void EnableDialogues()
