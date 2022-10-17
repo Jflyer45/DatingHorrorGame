@@ -42,7 +42,7 @@ public class DialogueAgent : MonoBehaviour
         self.transform.LookAt(gm.player.transform);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         //TODO do not allow interaction if NPC is moving.
         if (other.tag == "Player")
