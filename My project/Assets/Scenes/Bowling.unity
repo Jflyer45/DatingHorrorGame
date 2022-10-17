@@ -551,9 +551,7 @@ MonoBehaviour:
   dm: {fileID: 1143345752}
   dialogues:
   - {fileID: 11400000, guid: 9ceec1d8ba8b5db41b0b9784db1deaf7, type: 2}
-  - {fileID: 11400000, guid: 8c86cc284405de04e86fc61040c243d8, type: 2}
-  - {fileID: 11400000, guid: 560893fe5a217a74ab16aaa772de0b41, type: 2}
-  - {fileID: 11400000, guid: d716e746fa0f89241aec50e439c7e448, type: 2}
+  - {fileID: 11400000, guid: 6427b4864859cc34aa39e61e7e3d0012, type: 2}
   player: {fileID: 1528559077}
   attackDialogue: {fileID: 11400000, guid: c1407f559ddfbb047bf952d9ad372f1e, type: 2}
   MC: {fileID: 1318713141}
@@ -6245,6 +6243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   writingSpeed: 50
+  currentlyTyping: 0
 --- !u!1 &1272402105
 GameObject:
   m_ObjectHideFlags: 0
@@ -10415,7 +10414,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7310573180167176972}
-  m_LocalRotation: {x: -0.0093751, y: -0.036781717, z: 0.0147884125, w: 0.9991699}
+  m_LocalRotation: {x: -0.009375101, y: -0.036781717, z: 0.014788413, w: 0.9991699}
   m_LocalPosition: {x: -0.05342067, y: -0.000000022351742, z: 0.000000056810677}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999917}
   m_Children:
@@ -14139,7 +14138,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7310573181890795151}
-  m_LocalRotation: {x: -0.07922754, y: -0.04800106, z: 0.0152710425, w: 0.9955832}
+  m_LocalRotation: {x: -0.07922753, y: -0.04800106, z: 0.015271041, w: 0.9955832}
   m_LocalPosition: {x: -0.09688435, y: -0.012628396, z: 0.004193525}
   m_LocalScale: {x: 1.0000001, y: 1.0000004, z: 1.0000004}
   m_Children:
@@ -16343,7 +16342,7 @@ MonoBehaviour:
   minWeight: 0
   logResetErrors: 0
   useDisableDistance: 0
-  processing: 0
+  processing: 1
   disableDistance: 10
   eyeMovementRange: 30
   mutualGazeRange: 0.1
