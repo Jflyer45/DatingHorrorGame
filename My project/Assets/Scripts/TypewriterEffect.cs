@@ -8,8 +8,13 @@ public class TypewriterEffect : MonoBehaviour
     private string currentText;
     private TMP_Text currentTextBox;
     public bool currentlyTyping = false;
+    private bool containsDotPause = false;
     public void Run(string textToType, TMP_Text textLabel)
     {
+        if (textToType.Contains(". . .") || textToType.Contains("..."))
+        {
+            containsDotPause = true;
+        }
         StartCoroutine(TypeText(textToType, textLabel));
     }
 
@@ -20,6 +25,7 @@ public class TypewriterEffect : MonoBehaviour
             StopAllCoroutines();
             currentTextBox.text = currentText;
             currentlyTyping = false;
+            containsDotPause = false;
         }
     }
 
@@ -33,7 +39,16 @@ public class TypewriterEffect : MonoBehaviour
 
         while(charIndex < textToType.Length)
         {
-            t += Time.deltaTime * writingSpeed;
+            if (textToType[charIndex] == '.' && containsDotPause)
+            {
+                Debug.Log("Slow delta");
+                t += Time.deltaTime * 2;
+            }
+            else
+            {
+                t += Time.deltaTime * writingSpeed;
+            }
+
             charIndex = Mathf.FloorToInt(t);
             charIndex = Mathf.Clamp(charIndex, 0, textToType.Length);
 
@@ -43,5 +58,7 @@ public class TypewriterEffect : MonoBehaviour
         }
         textLabel.text = textToType;
         currentlyTyping = false;
+        containsDotPause = false;
+
     }
 }
