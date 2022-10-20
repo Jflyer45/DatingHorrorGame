@@ -92,6 +92,7 @@ public class Navigation : MonoBehaviour
     {
         currentRoute = null;
         nav.ResetPath();
+        nav.speed = 0;
     }
 
     void FacePlayer()
