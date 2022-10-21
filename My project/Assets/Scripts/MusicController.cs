@@ -5,6 +5,7 @@ using UnityEngine;
 public class MusicController : MonoBehaviour
 {
     private AudioSource AS;
+    public AudioClip horrorClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,12 @@ public class MusicController : MonoBehaviour
 
     public void Resume()
     {
+        AS.Play();
+    }
+
+    public void PlayHorrorAttack()
+    {
+        AS.clip = horrorClip;
         AS.Play();
     }
 }

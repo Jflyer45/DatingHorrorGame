@@ -11,8 +11,7 @@ public class Jumpscare : MonoBehaviour
     [SerializeField] private GameManager GM;
     [SerializeField] private FPSController fps;
     public Image image;
-    public GameObject parent;
-    private SkinnedMeshRenderer smr;
+    public MusicController MC;
 
     private void Awake()
     {
@@ -26,6 +25,7 @@ public class Jumpscare : MonoBehaviour
         Debug.Log(GM.jumpscareActive);
         if (GM.jumpscareActive && other.tag == "Player")
         {
+            MC.PauseMusic();
             AS.Play();
             fps.canMove = false;
             navigation.StopMoving();

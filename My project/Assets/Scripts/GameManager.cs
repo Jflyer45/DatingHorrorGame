@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator AttackPlayer()
     {
+        MC.PlayHorrorAttack();
         yield return new WaitUntil(DialogueNotInPlay);
         yield return new WaitForSeconds(1);
         ActivateHorrorAttack();
