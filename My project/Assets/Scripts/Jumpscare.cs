@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class Jumpscare : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class Jumpscare : MonoBehaviour
     private Navigation navigation;
     [SerializeField] private GameManager GM;
     [SerializeField] private FPSController fps;
-    public Image image;
+    public RawImage image;
+    public VideoPlayer videoPlayer;
     public MusicController MC;
 
     private void Awake()
@@ -25,6 +27,7 @@ public class Jumpscare : MonoBehaviour
         Debug.Log(GM.jumpscareActive);
         if (GM.jumpscareActive && other.tag == "Player")
         {
+            videoPlayer.Play();
             MC.PauseMusic();
             AS.Play();
             fps.canMove = false;
@@ -43,7 +46,7 @@ public class Jumpscare : MonoBehaviour
 
     IEnumerator SwitchScenes()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         SceneLoaderUtils.ChangeScene(SceneLoaderUtils.Scene.Erik);
     }
 }
