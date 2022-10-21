@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bowling.unity
     guid: 881bcb3199304fb4abddacb387f65944
+  - enabled: 1
+    path: Assets/Scenes/HorrorBasement.unity
+    guid: b4e06189d2ab1d74c9abb1ece5b7e4ed
   m_configObjects: {}
