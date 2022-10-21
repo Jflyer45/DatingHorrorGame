@@ -7,8 +7,15 @@ public class TypewriterEffect : MonoBehaviour
     public float writingSpeed = 50f;
     private string currentText;
     private TMP_Text currentTextBox;
+    private AudioSource AS;
     public bool currentlyTyping = false;
     private bool containsDotPause = false;
+
+    private void Awake()
+    {
+        AS = GetComponent<AudioSource>();
+    }
+
     public void Run(string textToType, TMP_Text textLabel)
     {
         if (textToType.Contains(". . .") || textToType.Contains("..."))
@@ -36,12 +43,13 @@ public class TypewriterEffect : MonoBehaviour
         float t = 0;
         int charIndex = 0;
         currentText = textToType;
+        string formerText = "";
+        AS.Play();
 
-        while(charIndex < textToType.Length)
+        while (charIndex < textToType.Length)
         {
             if (textToType[charIndex] == '.' && containsDotPause)
             {
-                Debug.Log("Slow delta");
                 t += Time.deltaTime * 2;
             }
             else
@@ -52,7 +60,13 @@ public class TypewriterEffect : MonoBehaviour
             charIndex = Mathf.FloorToInt(t);
             charIndex = Mathf.Clamp(charIndex, 0, textToType.Length);
 
-            textLabel.text = textToType.Substring(0, charIndex);
+            string newStringLength = textToType.Substring(0, charIndex);
+            textLabel.text = newStringLength;
+
+            if(textToType[charIndex] == ' ')
+            {
+                AS.Play();
+            }
 
             yield return null;
         }
