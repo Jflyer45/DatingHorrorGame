@@ -17,9 +17,7 @@ public class BowlingLaneDialogueEffects
         DialoguesWithEffects.Add("Intro", introEffects);
 
         List<DialogueEffect> beforeWePlay = new List<DialogueEffect>();
-        Dictionary<string, string> beforeWePlayCommandsOption1 = new Dictionary<string, string>();
-        beforeWePlayCommandsOption1.Add("NextDialogueIndex", "1");
-        beforeWePlay.Add(new DialogueEffect(0, "Bar", beforeWePlayCommandsOption1));
+        beforeWePlay.Add(new DialogueEffect(0, "Bar", new Dictionary<string, string>() { { "NextDialogueIndex", "1" } }));
         DialoguesWithEffects.Add("BeforeWePlay", beforeWePlay);
 
         //List<DialogueEffect> horrorEnding = new List<DialogueEffect>();
@@ -33,9 +31,7 @@ public class BowlingLaneDialogueEffects
         DialoguesWithEffects.Add("Bar", BarEffect);
 
         List<DialogueEffect> jukeboxEffects = new List<DialogueEffect>();
-        Dictionary<string, string> jukeboxEffectsCommandsOption1 = new Dictionary<string, string>();
-        jukeboxEffectsCommandsOption1.Add("ChangeSong", "0");
-        jukeboxEffects.Add(new DialogueEffect(0, null, jukeboxEffectsCommandsOption1));
+        jukeboxEffects.Add(new DialogueEffect(0, null, new Dictionary<string, string>() {{"ChangeSong", "0" }}));
         jukeboxEffects.Add(new DialogueEffect(0, null));
         jukeboxEffects.Add(new DialogueEffect(0, null));
         DialoguesWithEffects.Add("JukeBox", jukeboxEffects);
