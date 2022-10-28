@@ -32,8 +32,8 @@ public class BowlingLaneDialogueEffects
 
         List<DialogueEffect> jukeboxEffects = new List<DialogueEffect>();
         jukeboxEffects.Add(new DialogueEffect(0, null, new Dictionary<string, string>() {{"ChangeSong", "0" }}));
-        jukeboxEffects.Add(new DialogueEffect(0, null));
-        jukeboxEffects.Add(new DialogueEffect(0, null));
+        jukeboxEffects.Add(new DialogueEffect(0, null, new Dictionary<string, string>() { { "ChangeSong", "0" } }));
+        jukeboxEffects.Add(new DialogueEffect(0, null, new Dictionary<string, string>() { { "ChangeSong", "0" } }));
         DialoguesWithEffects.Add("JukeBox", jukeboxEffects);
 
         return DialoguesWithEffects;

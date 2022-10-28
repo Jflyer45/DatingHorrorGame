@@ -73,6 +73,10 @@ public class GameManager : MonoBehaviour
                 MC.PauseMusic();
                 lostRepour = true;
             }
+            else
+            {
+                lostRepour = false;
+            }
 
             if(de.locationCommand != null)
             {
