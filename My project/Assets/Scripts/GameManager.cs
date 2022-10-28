@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public bool jumpscareActive = false;
     private bool dateNPCMoving = false;
+    private bool lostRepour = false;
+    private bool dialoguePast = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,10 @@ public class GameManager : MonoBehaviour
         {
             return dialogues[dateNPCDialogueIndex];
         }
+        else if (agentName == "jukebox")
+        {
+            return dialogues[2];
+        }
         else
         {
             return null;
@@ -65,6 +71,7 @@ public class GameManager : MonoBehaviour
             if(de.moodChange < 0)
             {
                 MC.PauseMusic();
+                lostRepour = true;
             }
 
             if(de.locationCommand != null)
@@ -104,6 +111,10 @@ public class GameManager : MonoBehaviour
         {
             ChangeNextDialogue(Int32.Parse(commands["NextDialogueIndex"]));
         }
+        if (commands.ContainsKey("ChangeSong"))
+        {
+            MC.ChangeSong(Int32.Parse(commands["ChangeSong"]));
+        }
     }
 
     // returns true if dialogue was served, else false if no dialogue available.
@@ -121,6 +132,23 @@ public class GameManager : MonoBehaviour
         {
             return false;
         }        
+    }
+
+    // Used by dialogue manager to notify GM
+    public void NotifyChangeDialogue()
+    {
+        // In the case the player cauzed music stop, it will resume after dialogue change
+        if (!MC.IsPlaying() && dialoguePast)
+        {
+            Debug.Log("Resuming");
+            MC.Resume();
+            lostRepour = false;
+            dialoguePast = false;
+        }
+        else if(lostRepour)
+        {
+            dialoguePast = true;
+        }
     }
 
     //Used by navigation to tell GM when date npc moving

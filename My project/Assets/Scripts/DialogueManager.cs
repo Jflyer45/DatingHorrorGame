@@ -73,12 +73,15 @@ public class DialogueManager : MonoBehaviour
     // Given a dialogue is already in play, use this to change to the next one
     public void ChangeDialouge(Dialogue dialogue)
     {
+        gm.NotifyChangeDialogue();
         if (dialogue)
         {
             currentDialogue = dialogue;
             TWE.Run(currentDialogue.displayText, textBox);
             //this.textBox.text = currentDialogue.displayText;
             SetUpOptionButtons();
+
+            // Should there be a pause in music, resume after the player continues
         }
         else
         {
