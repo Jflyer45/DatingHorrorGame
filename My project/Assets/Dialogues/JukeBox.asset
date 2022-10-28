@@ -17,5 +17,8 @@ MonoBehaviour:
   - Country
   - Rap
   - Pop
-  optionDialogue: []
+  optionDialogue:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   nextDialogue: {fileID: 0}

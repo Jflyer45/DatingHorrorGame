@@ -6715,7 +6715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc12dbbc2d0f72428dcf20201be40b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  writingSpeed: 50
+  writingSpeed: 25
   currentlyTyping: 0
 --- !u!82 &1264623392
 AudioSource:
@@ -6727,7 +6727,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 64f748f6de301344e9ed6535e2084694, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d161a6ffea036984fa71a53362358b88, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6956,6 +6956,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horrorClip: {fileID: 8300000, guid: 499b829af0724ec48b52bb0a118abcf2, type: 3}
+  songs:
+  - {fileID: 8300000, guid: 493de4b9f7824994cb5128a7b02d3ff0, type: 3}
 --- !u!82 &1318713142
 AudioSource:
   m_ObjectHideFlags: 0

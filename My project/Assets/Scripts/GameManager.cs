@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     public Navigation dateNPCNav;
     public DateNPC dateNPC;
-    public SphereCollider dateNPCCollider;
     public DialogueManager dm;
     public List<Dialogue> dialogues; // More specifically conversation starts.
     private int dateNPCDialogueIndex;
@@ -23,7 +22,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CommandLocation("LaneToSide");
+        //CommandLocation("LaneToSide");
     }
 
     // Update is called once per frame

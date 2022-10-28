@@ -1036,7 +1036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Laundry:
-  - {fileID: 0}
+  - {fileID: 1282566205}
   BottomOfStairs:
   - {fileID: 1219373753}
 --- !u!4 &294399051
@@ -1445,7 +1445,7 @@ PrefabInstance:
     - target: {fileID: 4860944550218573877, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: gm
       value: 
-      objectReference: {fileID: 722490168}
+      objectReference: {fileID: 0}
     - target: {fileID: 4860944550218573877, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: playerController
       value: 
@@ -1980,12 +1980,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 722490167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40433f074d3136747a97892947615e32, type: 3}
+  m_Script: {fileID: 11500000, guid: d986f250b65a9a24386cfbd450f28a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dateNPCNav: {fileID: 2182268372998148664}
   dateNPC: {fileID: 2182268372998148661}
-  dateNPCCollider: {fileID: 0}
   dm: {fileID: 1728468847}
   dialogues: []
   player: {fileID: 403049013}
@@ -8524,7 +8523,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437396735616852623}
-  m_LocalRotation: {x: -0.07922753, y: -0.04800106, z: 0.015271041, w: 0.9955832}
+  m_LocalRotation: {x: -0.07922752, y: -0.04800106, z: 0.015271039, w: 0.9955832}
   m_LocalPosition: {x: -0.09688435, y: -0.012628396, z: 0.004193525}
   m_LocalScale: {x: 1.0000001, y: 1.0000004, z: 1.0000004}
   m_Children:
@@ -10375,7 +10374,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437396736308573964}
-  m_LocalRotation: {x: -0.009375101, y: -0.036781717, z: 0.014788413, w: 0.9991699}
+  m_LocalRotation: {x: -0.009375102, y: -0.036781717, z: 0.014788414, w: 0.9991699}
   m_LocalPosition: {x: -0.05342067, y: -0.000000022351742, z: 0.000000056810677}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999917}
   m_Children:
