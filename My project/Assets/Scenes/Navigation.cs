@@ -78,11 +78,13 @@ public class Navigation : MonoBehaviour
 
     private void NotifyGM()
     {
-        bool state;
-        if(currentRoute == null){state = false;}else{state = true;}
-        gm.UpdateAgentsMovementState(self.GetNPCName(), state);
+        gm.UpdateAgentsMovementState(self.GetNPCName(), IsMoving());
     }
 
+    public bool IsMoving()
+    {
+        if (currentRoute == null) { return false; } else { return true; }
+    }
     public void AttackPlayer()
     {
         TESTATTACKPLAYER = true;
