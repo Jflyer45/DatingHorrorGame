@@ -61,33 +61,39 @@ public class GameManager : MonoBehaviour
     
     public void ReceivePlayerChoice(int choice, Dialogue d)
     {
-        Dictionary<string, List<DialogueEffect>> dialoguesWithEffects = BowlingLaneDialogueEffects.GetDialogueWithEffects();
-
-        if (dialoguesWithEffects.ContainsKey(d.name))
+        // Builds command dic that is always run
+        Dictionary<string, string> alwaysCommands = new Dictionary<string, string>();
+        for(int i = 0; i < d.CommandAlwaysKey.Count; i++)
         {
-            DialogueEffect de = dialoguesWithEffects[d.name][choice];
-            dateNPC.ChangeMoodLevel(de.moodChange);
-            if(de.moodChange < 0)
-            {
-                MC.PauseMusic();
-                lostRepour = true;
-            }
-            else
-            {
-                lostRepour = false;
-            }
+            alwaysCommands.Add(d.CommandAlwaysKey[i], d.CommandAlwaysValue[i]);
+        }
 
-            if(de.locationCommand != null)
+        // Builds command dic for only the choice made
+        Dictionary<string, string> choiceCommands = new Dictionary<string, string>();
+        if(choice == 0)
+        {
+            for (int i = 0; i < d.CommandKeyChoice0.Count; i++)
             {
-                CommandLocation(de.locationCommand);
+                choiceCommands.Add(d.CommandKeyChoice0[i], d.CommandValueChoice0[i]);
             }
-            if (de.commands != null)
+        }else if(choice == 1)
+        {
+            for (int i = 0; i < d.CommandKeyChoice1.Count; i++)
             {
-                DeceiverDialogueCommand(de.commands);
+                choiceCommands.Add(d.CommandKeyChoice1[i], d.CommandValueChoice1[i]);
+            }
+        }else
+        {
+            for (int i = 0; i < d.CommandKeyChoice2.Count; i++)
+            {
+                choiceCommands.Add(d.CommandKeyChoice2[i], d.CommandValueChoice2[i]);
             }
         }
 
-        if(dateNPC.moodLevel == -3)
+        DeceiverDialogueCommand(alwaysCommands);
+        DeceiverDialogueCommand(choiceCommands);
+
+        if (dateNPC.moodLevel == -3)
         {
             //Serve final message and stop all other dialogue?
             dm.StartDialogue(attackDialogue);
@@ -110,6 +116,16 @@ public class GameManager : MonoBehaviour
 
     private void DeceiverDialogueCommand(Dictionary<string, string> commands)
     {
+        if (commands.ContainsKey("Mood"))
+        {
+            dateNPC.ChangeMoodLevel(Int32.Parse(commands["Mood"]));
+            MC.PauseMusic();
+            lostRepour = true;
+        }
+        if (commands.ContainsKey("Location"))
+        {
+            CommandLocation(commands["Location"]);
+        }
         if (commands.ContainsKey("NextDialogueIndex"))
         {
             ChangeNextDialogue(Int32.Parse(commands["NextDialogueIndex"]));
