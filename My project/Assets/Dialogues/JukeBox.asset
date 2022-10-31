@@ -22,3 +22,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   nextDialogue: {fileID: 0}
+  CommandKeyChoice0:
+  - ChangeSong
+  CommandValueChoice0:
+  - 0
+  CommandKeyChoice1:
+  - 
+  CommandValueChoice1: []
+  CommandKeyChoice2: []
+  CommandValueChoice2: []
+  CommandAlwaysKey: []
+  CommandAlwaysValue: []

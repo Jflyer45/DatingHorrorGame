@@ -22,3 +22,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c6a8e358ca481d444ada9d51e93ea613, type: 2}
   - {fileID: 11400000, guid: c6a8e358ca481d444ada9d51e93ea613, type: 2}
   nextDialogue: {fileID: 0}
+  CommandKeyChoice0:
+  - Mood
+  CommandValueChoice0:
+  - 1
+  CommandKeyChoice1:
+  - Mood
+  CommandValueChoice1:
+  - -1
+  CommandKeyChoice2:
+  - Mood
+  CommandValueChoice2:
+  - -1
+  CommandAlwaysKey: []
+  CommandAlwaysValue: []

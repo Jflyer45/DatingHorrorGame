@@ -18,3 +18,15 @@ MonoBehaviour:
   optionDialogue:
   - {fileID: 0}
   nextDialogue: {fileID: 0}
+  CommandKeyChoice0: []
+  CommandValueChoice0: []
+  CommandKeyChoice1: []
+  CommandValueChoice1: []
+  CommandKeyChoice2: []
+  CommandValueChoice2: []
+  CommandAlwaysKey:
+  - NextDialogueIndex
+  - Location
+  CommandAlwaysValue:
+  - 1
+  - Bar
