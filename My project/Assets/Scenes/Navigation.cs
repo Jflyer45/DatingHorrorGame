@@ -58,7 +58,7 @@ public class Navigation : MonoBehaviour
             else
             {
                 // Check if at the last location
-                if(routeIndex == currentRoute.Count - 1)
+                if(routeIndex == currentRoute.Count -1)
                 {
                     self.ChangeAnimationToIdle();
                     routeIndex = 0;
@@ -67,6 +67,8 @@ public class Navigation : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("New location");
+                    Debug.Log(routeIndex);
                     routeIndex++;
                     nav.destination = currentRoute[routeIndex].position;
                 }

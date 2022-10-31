@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HorrorController : GameManager
 {
+    private bool isPatrol = true;
 
     void Start()
     {
@@ -13,11 +14,15 @@ public class HorrorController : GameManager
     // Update is called once per frame
     void Update()
     {
-        
+        //if(isPatrol && !dateNPCMoving)
+        //{
+            //NPCPatrol();
+        //}
     }
 
     public void NPCPatrol()
     {
+        Debug.Log("Patrol");
         dateNPCNav.ReceiveCommand("Patrol");
     }
 }

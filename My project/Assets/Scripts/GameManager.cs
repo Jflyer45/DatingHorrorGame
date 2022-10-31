@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public MusicController MC;
 
     public bool jumpscareActive = false;
-    private bool dateNPCMoving = false;
+    protected bool dateNPCMoving = false;
     private bool lostRepour = false;
     private bool dialoguePast = false;
 
