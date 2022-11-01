@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public DialogueManager dm;
     public List<Dialogue> dialogues; // More specifically conversation starts.
     private int dateNPCDialogueIndex;
+    private int bartenderDialogueIndex = 3;
     public GameObject player;
     public Dialogue attackDialogue;
     public MusicController MC;
@@ -47,6 +48,10 @@ public class GameManager : MonoBehaviour
         {
             return dialogues[2];
         }
+        else if(agentName == "bartender")
+        {
+            return dialogues[bartenderDialogueIndex];
+        }
         else
         {
             return null;
@@ -58,6 +63,10 @@ public class GameManager : MonoBehaviour
         dateNPCDialogueIndex = index;
     }
 
+    private void ChangeBartenderDialogue(int index)
+    {
+        bartenderDialogueIndex = index;
+    }
     
     public void ReceivePlayerChoice(int choice, Dialogue d)
     {

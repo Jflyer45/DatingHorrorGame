@@ -5,7 +5,7 @@ using TMPro;
 public class DialogueAgent : MonoBehaviour
 {
     // Needs to be abstracted to NPC so that the bartender has access to 
-    public DateNPC self;
+    public NPC self;
     private Navigation selfNav;
     public TMP_Text rangeIndicator;
     bool inRange = false;
