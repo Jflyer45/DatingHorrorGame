@@ -982,6 +982,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9ceec1d8ba8b5db41b0b9784db1deaf7, type: 2}
   - {fileID: 11400000, guid: 6427b4864859cc34aa39e61e7e3d0012, type: 2}
   - {fileID: 11400000, guid: 4f2daed554f7b8444abb73c53295e0ed, type: 2}
+  - {fileID: 11400000, guid: 7e2bb010d8fc15a4583e7e31b40f351f, type: 2}
   player: {fileID: 1528559077}
   attackDialogue: {fileID: 11400000, guid: c1407f559ddfbb047bf952d9ad372f1e, type: 2}
   MC: {fileID: 1318713141}
@@ -10066,7 +10067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0286c7d5afa394792d67771e3b670b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  self: {fileID: 0}
+  self: {fileID: 1131298460}
   rangeIndicator: {fileID: 1357510600}
   gm: {fileID: 107471901}
 --- !u!65 &957548784
@@ -12453,6 +12454,7 @@ GameObject:
   - component: {fileID: 1131298453}
   - component: {fileID: 1131298452}
   - component: {fileID: 1131298460}
+  - component: {fileID: 1131298451}
   m_Layer: 0
   m_Name: DateNPC (1)
   m_TagString: Untagged
@@ -12460,6 +12462,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1131298451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131298450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab6f6d83d9df76439ba397c23f3cd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1528559077}
+  routes: {fileID: 0}
+  TESTATTACKPLAYER: 0
+  gm: {fileID: 107471901}
 --- !u!65 &1131298452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18866,7 +18884,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709002044}
-  m_LocalRotation: {x: -0.009375124, y: -0.036781717, z: 0.014788437, w: 0.9991699}
+  m_LocalRotation: {x: -0.009375128, y: -0.036781717, z: 0.01478844, w: 0.9991699}
   m_LocalPosition: {x: -0.05342067, y: -0.000000022351742, z: 0.000000056810677}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999917}
   m_Children:

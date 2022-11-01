@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
   m_Name: BartenderServes
   m_EditorClassIdentifier: 
-  displayText: 
+  displayText: Sure, yeah, whatever . . .
   optionsText: []
   optionDialogue: []
   nextDialogue: {fileID: 0}
