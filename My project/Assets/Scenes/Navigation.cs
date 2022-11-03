@@ -60,27 +60,15 @@ public class Navigation : MonoBehaviour
         // See if there is a route
         if (currentRoute != null)
         {
-            Debug.Log(currentRoute);
-            float currentX = nav.transform.position.x;
-            float currentY = nav.transform.position.y;
-            float targetX = currentRoute[routeIndex].position.x;
-            float targetY = currentRoute[routeIndex].position.y;
-
-            bool xTest = (xLeniency + targetX >= currentX && targetX - xLeniency <= currentX);
-            bool yTest = yLeniency + targetY >= currentY && targetY - yLeniency <= currentY;
-            // Check if not made it to desination (only checking x & y), else iterate to next location
-            if (!(xTest && yTest))
-            {
-                Debug.Log("Not reached yet");
-                nav.destination = currentRoute[routeIndex].position;
-            }
-            else
+            nav.destination = currentRoute[routeIndex].position;
+            if(nav.remainingDistance <= .1 && nav.pathPending == false)
             {
                 Debug.Log(routeIndex == currentRoute.Count - 1);
                 // Check if at the last location
                 if(routeIndex == currentRoute.Count -1)
                 {
-                    Debug.Log("Reached target");
+                    Debug.Log("Reached target" + currentRoute[routeIndex].position);
+                    Debug.Log(nav.remainingDistance);
                     Debug.Log(currentRoute[0].name);
                     self.ChangeAnimationToIdle();
                     routeIndex = 0;

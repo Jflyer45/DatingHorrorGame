@@ -3,12 +3,10 @@ tree("root")
 
 tree("Patrol")
 	sequence
-		//MoveTo("CloseRightCorner")
-		//Wait 0.5
-		//MoveTo("FarRightCorner")
-		//Wait 0.5
-		//MoveTo("FarLeftCorner")
-		//Wait 0.5
-		//MoveTo("CloseLeftCorner")
 		MoveTo("CloseRightCorner")
+		Wait 0.5
+		MoveTo("FarRightCorner")
+		Wait 0.5
+		MoveTo("FarLeftCorner")
+		Wait 0.5
 		MoveTo("CloseLeftCorner")
