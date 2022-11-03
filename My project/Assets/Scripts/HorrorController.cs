@@ -8,7 +8,7 @@ public class HorrorController : GameManager
 
     void Start()
     {
-        NPCPatrol();
+        ///NPCPatrol();
     }
 
     // Update is called once per frame
@@ -20,9 +20,9 @@ public class HorrorController : GameManager
         //}
     }
 
-    public void NPCPatrol()
-    {
-        Debug.Log("Patrol");
-        dateNPCNav.ReceiveCommand("Patrol");
-    }
+    //public void NPCPatrol()
+    //{
+        //Debug.Log("Patrol");
+        //dateNPCNav.ReceiveCommand("Patrol");
+    //}
 }

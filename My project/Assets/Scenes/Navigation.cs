@@ -11,6 +11,7 @@ public class Navigation : MonoBehaviour
     [SerializeField] Routes routes;
     [SerializeField] bool TESTATTACKPLAYER = false;
     [SerializeField] GameManager gm;
+    private HorrorBasementBT bt;
 
     private List<Transform> currentRoute = null;
     private int routeIndex = 0;
@@ -20,6 +21,7 @@ public class Navigation : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        bt = GetComponent<HorrorBasementBT>();
         self = GetComponent<NPC>();
         nav = GetComponent<NavMeshAgent>();
     }
@@ -46,7 +48,7 @@ public class Navigation : MonoBehaviour
         NotifyGM(); // We are now moving
     }
 
-    public void ReceiveCommand(string routeKey, int distanceLeniency)
+    public void ReceiveCommand(string routeKey, float distanceLeniency)
     {
         xLeniency = distanceLeniency;
         yLeniency = distanceLeniency;
@@ -58,6 +60,7 @@ public class Navigation : MonoBehaviour
         // See if there is a route
         if (currentRoute != null)
         {
+            Debug.Log(currentRoute);
             float currentX = nav.transform.position.x;
             float currentY = nav.transform.position.y;
             float targetX = currentRoute[routeIndex].position.x;
@@ -69,21 +72,24 @@ public class Navigation : MonoBehaviour
             if (!(xTest && yTest))
             {
                 Debug.Log("Not reached yet");
-                Debug.Log(xTest + " " + currentX + " target x: " + targetX);
-                
-                Debug.Log(yTest + " " + currentY + " target y: " + targetY);
-
                 nav.destination = currentRoute[routeIndex].position;
             }
             else
             {
+                Debug.Log(routeIndex == currentRoute.Count - 1);
                 // Check if at the last location
                 if(routeIndex == currentRoute.Count -1)
                 {
+                    Debug.Log("Reached target");
+                    Debug.Log(currentRoute[0].name);
                     self.ChangeAnimationToIdle();
                     routeIndex = 0;
                     currentRoute = null;
                     NotifyGM(); // no longer moving
+                    if(bt != null)
+                    {
+                        bt.NotifyBT();
+                    }
                 }
                 else
                 {

@@ -1049,6 +1049,14 @@ MonoBehaviour:
   - {fileID: 1002334368}
   - {fileID: 1376211576}
   - {fileID: 888401430}
+  CloseRightCorner:
+  - {fileID: 888401430}
+  CloseLeftCorner:
+  - {fileID: 1376211576}
+  FarRightCorner:
+  - {fileID: 1543337755}
+  FarLeftCorner:
+  - {fileID: 1002334368}
 --- !u!4 &294399051
 Transform:
   m_ObjectHideFlags: 0
@@ -1408,9 +1416,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1947404671882077668, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1947404671882077671, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1947404671882077671, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7901,7 +7913,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &724928941481846564
 GameObject:
@@ -13910,6 +13922,8 @@ GameObject:
   - component: {fileID: 2182268372998148663}
   - component: {fileID: 2182268372998148664}
   - component: {fileID: 2182268372998148662}
+  - component: {fileID: 2182268372998148665}
+  - component: {fileID: 2182268372998148666}
   m_Layer: 0
   m_Name: DateNPC
   m_TagString: Untagged
@@ -14068,6 +14082,40 @@ MonoBehaviour:
   routes: {fileID: 294399050}
   TESTATTACKPLAYER: 0
   gm: {fileID: 722490168}
+--- !u!114 &2182268372998148665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2182268372998148659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e43e7170fb45b4b81dcd16d0ff55d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scripts:
+  - {fileID: 4900000, guid: 7cb91b3246a1348409b3eb80caabf4b9, type: 3}
+  autoReset: 1
+  tickOn: 0
+  sourceInfos:
+  - isFoldout: 1
+    breakPoints: 
+    breakPointStatuses: 
+    collapsedLines: 
+    btScript: 
+--- !u!114 &2182268372998148666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2182268372998148659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa66e5096920d44f812dd9ed3665043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2182279583320453759
 GameObject:
   m_ObjectHideFlags: 0
