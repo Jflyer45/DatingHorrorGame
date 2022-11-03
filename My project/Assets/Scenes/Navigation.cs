@@ -14,6 +14,8 @@ public class Navigation : MonoBehaviour
 
     private List<Transform> currentRoute = null;
     private int routeIndex = 0;
+    private float xLeniency = .1f;
+    private float yLeniency = .1f;
 
     // Start is called before the first frame update
     void Awake()
@@ -44,15 +46,33 @@ public class Navigation : MonoBehaviour
         NotifyGM(); // We are now moving
     }
 
+    public void ReceiveCommand(string routeKey, int distanceLeniency)
+    {
+        xLeniency = distanceLeniency;
+        yLeniency = distanceLeniency;
+        ReceiveCommand(routeKey);
+    }
+
     private void Move()
     {
         // See if there is a route
         if (currentRoute != null)
         {
+            float currentX = nav.transform.position.x;
+            float currentY = nav.transform.position.y;
+            float targetX = currentRoute[routeIndex].position.x;
+            float targetY = currentRoute[routeIndex].position.y;
+
+            bool xTest = (xLeniency + targetX >= currentX && targetX - xLeniency <= currentX);
+            bool yTest = yLeniency + targetY >= currentY && targetY - yLeniency <= currentY;
             // Check if not made it to desination (only checking x & y), else iterate to next location
-            if (nav.transform.position.x != currentRoute[routeIndex].position.x &&
-                nav.transform.position.y != currentRoute[routeIndex].position.y)
+            if (!(xTest && yTest))
             {
+                Debug.Log("Not reached yet");
+                Debug.Log(xTest + " " + currentX + " target x: " + targetX);
+                
+                Debug.Log(yTest + " " + currentY + " target y: " + targetY);
+
                 nav.destination = currentRoute[routeIndex].position;
             }
             else

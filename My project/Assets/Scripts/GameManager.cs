@@ -23,13 +23,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //CommandLocation("LaneToSide");
+        //StartCoroutine(StartBowling());
+        CommandLocation("LaneToSide");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void CommandLocation(string routeKey)
@@ -193,5 +194,20 @@ public class GameManager : MonoBehaviour
         dateNPCNav.AttackPlayer();
         jumpscareActive = true;
         dm.DisableDialogue();
+    }
+
+    public IEnumerator StartBowling()
+    {
+        CommandLocation("BowlingBall");
+        if (dateNPCMoving)
+        {
+            yield return null;
+        }
+
+        Debug.Log("PickUp now");
+        // Coroutine till get to ball?
+        dateNPC.ChangeAnimationToPickUp();
+        //
+        dateNPC.ChangeAnimationToBowling();
     }
 }

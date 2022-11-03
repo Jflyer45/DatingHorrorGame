@@ -23,6 +23,16 @@ public class NPC : MonoBehaviour
         ResetAnimatorBools();
     }
 
+    public void ChangeAnimationToPickUp()
+    {
+        animator.SetBool("isPickup", true);
+    }
+
+    public void ChangeAnimationToBowling()
+    {
+        animator.SetBool("isBowling", true);
+    }
+
     public void ChangeAnimationToRunning()
     {
         ResetAnimatorBools();
@@ -33,6 +43,8 @@ public class NPC : MonoBehaviour
     {
         animator.SetBool("isWalking", false);
         animator.SetBool("isRunning", false);
+        animator.SetBool("isPickup", false);
+        animator.SetBool("isBowling", false);
     }
 
 
