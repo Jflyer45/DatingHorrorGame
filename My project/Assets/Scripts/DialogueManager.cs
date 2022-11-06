@@ -149,11 +149,13 @@ public class DialogueManager : MonoBehaviour
     private void EnablePlayerMovement()
     {
         playerController.canMove = true;
+        playerController.canLook = true;
     }
 
     private void DisablePlayerMovement()
     {
         playerController.canMove = false;
+        playerController.canLook = false;
     }
 
     public bool HasActiveDialogue()

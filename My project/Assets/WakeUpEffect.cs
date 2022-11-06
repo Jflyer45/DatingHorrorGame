@@ -5,10 +5,15 @@ using UnityEngine;
 public class WakeUpEffect : MonoBehaviour
 {
     Animator a;
-    FPSController controller;
     void Start()
     {
         a = GetComponent<Animator>();
-        //StartCoroutine("WakeUp");
+        StartCoroutine("test");
+    }
+
+    private IEnumerator test()
+    {
+        yield return new WaitForSeconds(3f);
+        a.enabled = false;
     }
 }

@@ -20,6 +20,7 @@ public class FPSController : MonoBehaviour
 
     [HideInInspector]
     public bool canMove = true;
+    public bool canLook = true;
 
     void Start()
     {
@@ -63,7 +64,7 @@ public class FPSController : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime);
 
         // Player and Camera rotation
-        if (canMove && !PauseMenu.GameIsPaused)
+        if (canLook && !PauseMenu.GameIsPaused)
         {
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
