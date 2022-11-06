@@ -6,6 +6,7 @@ public class NPC : MonoBehaviour
 {
     public string npcName;
     private Animator animator;
+    public GameObject rightHand;
 
     private void Awake()
     {
@@ -25,11 +26,13 @@ public class NPC : MonoBehaviour
 
     public void ChangeAnimationToPickUp()
     {
+        ResetAnimatorBools();
         animator.SetBool("isPickup", true);
     }
 
     public void ChangeAnimationToBowling()
     {
+        ResetAnimatorBools();
         animator.SetBool("isBowling", true);
     }
 

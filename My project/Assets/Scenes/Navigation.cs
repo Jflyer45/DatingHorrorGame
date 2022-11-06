@@ -139,6 +139,13 @@ public class Navigation : MonoBehaviour
         {
             yield return null;
         }
+
+        Debug.Log("Snapping the item to hand");
+        
+        var tempLocalScale = item.transform.localScale;
+        item.transform.SetParent(self.rightHand.transform, true);
+        item.transform.localScale = tempLocalScale;
+
         //On trigger enter appned to hand?
         //move to ally
         self.ChangeAnimationToBowling();

@@ -8353,7 +8353,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756727390}
-  m_LocalRotation: {x: 0.00030285923, y: 0.16390508, z: -0.000037338865, w: 0.98647606}
+  m_LocalRotation: {x: 0.0003028592, y: 0.16390508, z: -0.00003733886, w: 0.98647606}
   m_LocalPosition: {x: 0.000000001122288, y: -7.39661e-10, z: -0.000007830111}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_Children: []
@@ -12603,7 +12603,7 @@ MonoBehaviour:
   minWeight: 0
   logResetErrors: 0
   useDisableDistance: 0
-  processing: 1
+  processing: 0
   disableDistance: 10
   eyeMovementRange: 30
   mutualGazeRange: 0.1
@@ -13029,6 +13029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcName: bartender
+  rightHand: {fileID: 0}
 --- !u!1 &1132521773
 GameObject:
   m_ObjectHideFlags: 0
@@ -14505,7 +14506,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284978547}
-  m_LocalRotation: {x: 0.000561081, y: -0.0036773395, z: -0.19357464, w: 0.98107857}
+  m_LocalRotation: {x: 0.00056108105, y: -0.0036773395, z: -0.19357467, w: 0.98107857}
   m_LocalPosition: {x: 0.00011020559, y: -0.015126845, z: 0.0008222026}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children: []
@@ -18887,7 +18888,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709002044}
-  m_LocalRotation: {x: -0.009375142, y: -0.036781717, z: 0.014788454, w: 0.9991699}
+  m_LocalRotation: {x: -0.0093751475, y: -0.036781717, z: 0.01478846, w: 0.9991699}
   m_LocalPosition: {x: -0.05342067, y: -0.000000022351742, z: 0.000000056810677}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999917}
   m_Children:
@@ -19363,6 +19364,36 @@ Transform:
   - {fileID: 1055211421}
   m_Father: {fileID: 853313056}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1754432267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1754432268}
+  m_Layer: 0
+  m_Name: RHandTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1754432268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754432267}
+  m_LocalRotation: {x: -0.000000017453292, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 7310573180581919952}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759038755
 GameObject:
@@ -25056,6 +25087,7 @@ Transform:
   m_LocalScale: {x: 1.000001, y: 1.0000007, z: 1.000001}
   m_Children:
   - {fileID: 7310573181179056987}
+  - {fileID: 1754432268}
   m_Father: {fileID: 7310573182031815772}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29919,6 +29951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcName: erik
+  rightHand: {fileID: 1754432267}
   moodLevel: 0
   test: 0
   test2: 0

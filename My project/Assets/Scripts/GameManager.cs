@@ -205,18 +205,5 @@ public class GameManager : MonoBehaviour
     public void StartBowling()
     {
         dateNPCNav.PickUpItem(bowlingBall);
-        //while (dateNPCMoving)
-        //{
-            //yield return null;
-        //}
-        //dateNPC.transform.LookAt(bowlingBall.transform);
-
-        //Debug.Log("PickUp now");
-        // Coroutine till get to ball?
-        //dateNPC.ChangeAnimationToPickUp();
-        //On trigger enter appned to hand?
-        //move to ally
-        //dateNPC.ChangeAnimationToBowling();
-        //shoot bowling ball.
     }
 }
