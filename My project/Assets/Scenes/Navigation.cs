@@ -15,8 +15,7 @@ public class Navigation : MonoBehaviour
 
     private List<Transform> currentRoute = null;
     private int routeIndex = 0;
-    private float xLeniency = .1f;
-    private float yLeniency = .1f;
+    private float leniency = .1f;
 
     // Start is called before the first frame update
     void Awake()
@@ -48,10 +47,17 @@ public class Navigation : MonoBehaviour
         NotifyGM(); // We are now moving
     }
 
+    public void ReceiveCommand(GameObject obj)
+    {
+        currentRoute = new List<Transform>() {obj.transform};
+        routeIndex = 0;
+        self.ChangeAnimationToWalk(); // put this here so that it's only called once
+        NotifyGM(); // We are now moving
+    }
+
     public void ReceiveCommand(string routeKey, float distanceLeniency)
     {
-        xLeniency = distanceLeniency;
-        yLeniency = distanceLeniency;
+        leniency = distanceLeniency;
         ReceiveCommand(routeKey);
     }
 
@@ -61,7 +67,7 @@ public class Navigation : MonoBehaviour
         if (currentRoute != null)
         {
             nav.destination = currentRoute[routeIndex].position;
-            if(nav.remainingDistance <= .1 && nav.pathPending == false)
+            if(nav.remainingDistance <= leniency && nav.pathPending == false)
             {
                 Debug.Log(routeIndex == currentRoute.Count - 1);
                 // Check if at the last location
@@ -116,5 +122,31 @@ public class Navigation : MonoBehaviour
     void FacePlayer()
     {
         self.transform.LookAt(player.transform);
+    }
+
+    private IEnumerator PickUpItemCo(GameObject item)
+    {
+        ReceiveCommand(item);
+        while (IsMoving())
+        {
+            yield return null;
+        }
+        //dateNPC.transform.LookAt(bowlingBall.transform);
+
+        Debug.Log("PickUp now");
+        self.ChangeAnimationToPickUp();
+        while (self.GetAnimator().GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !self.GetAnimator().IsInTransition(0))
+        {
+            yield return null;
+        }
+        //On trigger enter appned to hand?
+        //move to ally
+        self.ChangeAnimationToBowling();
+        //shoot bowling ball.
+    }
+
+    public void PickUpItem(GameObject item)
+    {
+        StartCoroutine(PickUpItemCo(item));
     }
 }

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public Dialogue attackDialogue;
     public MusicController MC;
+    public GameObject bowlingBall;
 
     public bool jumpscareActive = false;
     protected bool dateNPCMoving = false;
@@ -23,8 +24,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(StartBowling());
-        CommandLocation("LaneToSide");
+        StartBowling();
+      
     }
 
     // Update is called once per frame
@@ -36,6 +37,11 @@ public class GameManager : MonoBehaviour
     private void CommandLocation(string routeKey)
     {
         dateNPCNav.ReceiveCommand(routeKey);
+    }
+
+    private void CommandLocation(string routeKey, float leniency)
+    {
+        dateNPCNav.ReceiveCommand(routeKey, leniency);
     }
 
     private Dialogue NextDialogue(string agentName)
@@ -196,18 +202,21 @@ public class GameManager : MonoBehaviour
         dm.DisableDialogue();
     }
 
-    public IEnumerator StartBowling()
+    public void StartBowling()
     {
-        CommandLocation("BowlingBall");
-        if (dateNPCMoving)
-        {
-            yield return null;
-        }
+        dateNPCNav.PickUpItem(bowlingBall);
+        //while (dateNPCMoving)
+        //{
+            //yield return null;
+        //}
+        //dateNPC.transform.LookAt(bowlingBall.transform);
 
-        Debug.Log("PickUp now");
+        //Debug.Log("PickUp now");
         // Coroutine till get to ball?
-        dateNPC.ChangeAnimationToPickUp();
-        //
-        dateNPC.ChangeAnimationToBowling();
+        //dateNPC.ChangeAnimationToPickUp();
+        //On trigger enter appned to hand?
+        //move to ally
+        //dateNPC.ChangeAnimationToBowling();
+        //shoot bowling ball.
     }
 }
