@@ -10,3 +10,7 @@ tree("Patrol")
 		MoveTo("FarLeftCorner")
 		Wait 0.5
 		MoveTo("CloseLeftCorner")
+
+//tree("ChasePlayer")
+	//sequence
+		

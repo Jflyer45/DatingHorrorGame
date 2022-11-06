@@ -17,6 +17,12 @@ public class HorrorBasementBT : MonoBehaviour
     }
 
     [Task]
+    void ChasePlayer()
+    {
+
+    }
+
+    [Task]
     void MoveTo(string location)
     {
         if (!hasOrderedCommand)
