@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0730877, g: 0.0708142, b: 0.05741477, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1196,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1947404671882077671, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1947404671882077671, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1385,7 +1385,7 @@ PrefabInstance:
     - target: {fileID: 4860944550218573877, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: gm
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 722490168}
     - target: {fileID: 4860944550218573877, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: playerController
       value: 
@@ -1693,7 +1693,7 @@ Transform:
   - {fileID: 637803027}
   - {fileID: 110236324}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &478608568
 GameObject:
@@ -2535,11 +2535,13 @@ MonoBehaviour:
   dateNPCNav: {fileID: 2182268372998148664}
   dateNPC: {fileID: 2182268372998148661}
   dm: {fileID: 1784916406}
-  dialogues: []
+  dialogues:
+  - {fileID: 11400000, guid: 70b54abb02ac37d4a9851b5a407a0e86, type: 2}
   player: {fileID: 988371447}
   attackDialogue: {fileID: 0}
   MC: {fileID: 1147179487}
   bowlingBall: {fileID: 0}
+  playerController: {fileID: 988371448}
   jumpscareActive: 0
 --- !u!4 &722490169
 Transform:
@@ -3025,6 +3027,17 @@ Transform:
   m_Father: {fileID: 101159262}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &902526888 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3476184568989935406, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
+  m_PrefabInstance: {fileID: 340321725}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &906307266
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,7 +3151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &922238832
 Light:
   m_ObjectHideFlags: 0
@@ -3151,7 +3164,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.03
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4398,7 +4411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282566204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.976, y: 0.144, z: -5.06}
+  m_LocalPosition: {x: 4.331, y: 0.144, z: -5.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15358,7 +15371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: erik
   rightHand: {fileID: 0}
-  moodLevel: 0
+  moodLevel: -3
   test: 0
   test2: 0
 --- !u!114 &2182268372998148662
@@ -16241,7 +16254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2182268372998148659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.537953, y: 0.049972057, z: 0.60988045}
+  m_LocalPosition: {x: -5.905, y: 0.049972057, z: 4.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16921,8 +16934,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self: {fileID: 2182268372998148661}
-  rangeIndicator: {fileID: 0}
-  gm: {fileID: 0}
+  rangeIndicator: {fileID: 902526888}
+  gm: {fileID: 722490168}
 --- !u!1 &8540785478972069628
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class Navigation : MonoBehaviour
     private NPC self;
     [SerializeField] GameObject player;
     [SerializeField] Routes routes;
-    [SerializeField] bool TESTATTACKPLAYER = false;
+    public bool TESTATTACKPLAYER = false;
     [SerializeField] GameManager gm;
     private HorrorBasementBT bt;
 
@@ -110,6 +110,13 @@ public class Navigation : MonoBehaviour
     {
         TESTATTACKPLAYER = true;
         nav.speed = 6;
+        nav.acceleration = 100; //so player cannot juke
+    }
+
+    public void ChasePlayer()
+    {
+        TESTATTACKPLAYER = true;
+        nav.speed = 3;
         nav.acceleration = 100; //so player cannot juke
     }
 

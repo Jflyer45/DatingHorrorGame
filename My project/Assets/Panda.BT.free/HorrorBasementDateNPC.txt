@@ -1,5 +1,8 @@
 tree("root")
-	tree("Patrol")
+	fallback
+		while not CanSeePlayer
+			tree("Patrol")
+		tree("ChasePlayer")
 
 tree("Patrol")
 	sequence
@@ -10,7 +13,8 @@ tree("Patrol")
 		MoveTo("FarLeftCorner")
 		Wait 0.5
 		MoveTo("CloseLeftCorner")
+		Succeed
 
-//tree("ChasePlayer")
-	//sequence
-		
+tree("ChasePlayer")
+	sequence
+		ChasePlayer()

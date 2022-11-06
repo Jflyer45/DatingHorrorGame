@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public Dialogue attackDialogue;
     public MusicController MC;
     public GameObject bowlingBall;
+    public FPSController playerController;
 
     public bool jumpscareActive = false;
     protected bool dateNPCMoving = false;
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private void CommandLocation(string routeKey)
+    protected void CommandLocation(string routeKey)
     {
         dateNPCNav.ReceiveCommand(routeKey);
     }
@@ -65,7 +66,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ChangeNextDialogue(int index)
+    protected void ChangeNextDialogue(int index)
     {
         dateNPCDialogueIndex = index;
     }
