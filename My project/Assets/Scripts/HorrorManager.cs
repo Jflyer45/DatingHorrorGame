@@ -44,6 +44,9 @@ public class HorrorManager : GameManager
             yield return null;
         }
 
+        yield return new WaitForSeconds(1f);
+        playerController.canMove = true;
+
         //Grace time
         yield return new WaitForSeconds(15f);
 
