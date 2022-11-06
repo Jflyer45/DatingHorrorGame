@@ -518,7 +518,7 @@ Transform:
   - {fileID: 1376211576}
   - {fileID: 888401430}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &110236323
 GameObject:
@@ -1196,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1947404671882077671, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1947404671882077671, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2543,6 +2543,8 @@ MonoBehaviour:
   bowlingBall: {fileID: 0}
   playerController: {fileID: 988371448}
   jumpscareActive: 0
+  dateFOV: {fileID: 4461853043041393382}
+  bt: {fileID: 2182268372998148665}
 --- !u!4 &722490169
 Transform:
   m_ObjectHideFlags: 0
@@ -15386,7 +15388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0637ff73d58d50e4eb0182eabcb3391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mood: 0
+  mood: -3
 --- !u!195 &2182268372998148663
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15432,7 +15434,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2182268372998148659}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17e43e7170fb45b4b81dcd16d0ff55d9, type: 3}
   m_Name: 
@@ -15440,7 +15442,7 @@ MonoBehaviour:
   scripts:
   - {fileID: 4900000, guid: 7cb91b3246a1348409b3eb80caabf4b9, type: 3}
   autoReset: 1
-  tickOn: 0
+  tickOn: 3
   sourceInfos:
   - isFoldout: 1
     breakPoints: 
