@@ -27,6 +27,7 @@ public class HorrorManager : GameManager
     private IEnumerator Intro()
     {
         playerController.canMove = false;
+        playerController.canLook = false;
         CommandLocation("Laundry");
         while (dateNPCNav.IsMoving())
         {
@@ -38,8 +39,8 @@ public class HorrorManager : GameManager
         {
             yield return null;
         }
-        playerController.canMove = false;
         CommandLocation("BottomOfStairs");
+        playerController.canMove = false;
 
         while (dateNPCNav.IsMoving())
         {
