@@ -144,7 +144,7 @@ public class Navigation : MonoBehaviour
         Debug.Log("Snapping the item to hand");
         item.GetComponent<Rigidbody>().useGravity = false;
         item.transform.SetParent(self.rightHand.transform, true);
-        item.transform.position = new Vector3(1, 1 , 1);
+        item.transform.position = new Vector3(3, 1 , 1);
         
         
 
