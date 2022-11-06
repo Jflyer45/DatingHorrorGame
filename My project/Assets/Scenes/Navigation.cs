@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 public class Navigation : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -141,10 +142,11 @@ public class Navigation : MonoBehaviour
         }
 
         Debug.Log("Snapping the item to hand");
-        
-        var tempLocalScale = item.transform.localScale;
+        item.GetComponent<Rigidbody>().useGravity = false;
         item.transform.SetParent(self.rightHand.transform, true);
-        item.transform.localScale = tempLocalScale;
+        item.transform.position = new Vector3(1, 1 , 1);
+        
+        
 
         //On trigger enter appned to hand?
         //move to ally
