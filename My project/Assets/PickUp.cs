@@ -20,6 +20,7 @@ public class PickUp : MonoBehaviour
     {
         item = gameObject;
         itemRigidbody = item.GetComponent<Rigidbody>();
+        tempParent = GameObject.Find("Guide");
     }
 
     // Update is called once per frame
