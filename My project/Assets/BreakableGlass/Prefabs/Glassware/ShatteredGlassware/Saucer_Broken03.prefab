@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4156958862199321576}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.014
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 1628770574348747203}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.003
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 7512925761978469130}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.012
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 1937555292190421363}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.013
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 111075930087820307}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.015
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,7 +681,7 @@ GameObject:
   - component: {fileID: 4600703131853276382}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.011
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 4075200907658128190}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.001
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -947,7 +947,7 @@ GameObject:
   - component: {fileID: 3546452245284382644}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1080,7 +1080,7 @@ GameObject:
   - component: {fileID: 4718436394170020540}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.010
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1213,7 +1213,7 @@ GameObject:
   - component: {fileID: 3322745701907066432}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.004
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1346,7 +1346,7 @@ GameObject:
   - component: {fileID: 4254120953883756108}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.005
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1479,7 +1479,7 @@ GameObject:
   - component: {fileID: 513733705751431330}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.009
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1612,7 +1612,7 @@ GameObject:
   - component: {fileID: 1693843889014280404}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.006
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1745,7 +1745,7 @@ GameObject:
   - component: {fileID: 1348374134835936915}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.008
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1878,7 +1878,7 @@ GameObject:
   - component: {fileID: 1960740404993060302}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.007
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2011,7 +2011,7 @@ GameObject:
   - component: {fileID: 6109515689367778124}
   m_Layer: 0
   m_Name: Saucer_Broken03_Shard.002
-  m_TagString: Untagged
+  m_TagString: GlassShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
