@@ -10,11 +10,14 @@ public class HorrorManager : GameManager
     public PandaBehaviour bt;
     public GameObject itemHolder;
     public TMP_Text cutRopeIndicator;
+    public GameObject key;
+    public List<Transform> keyLocations;
 
     private bool hasCutRope = false;
 
     void Start()
     {
+        SetUpItems();
         TurnGlassIndicatorOff();
         playerController.canMove = false;
         StartCoroutine("Intro");
@@ -105,5 +108,17 @@ public class HorrorManager : GameManager
     private void TurnGlassIndicatorOn()
     {
         cutRopeIndicator.text = "Press 'F' to cut rope";
+    }
+
+    private void SetUpItems()
+    {
+        RandomSpawn(key, keyLocations);
+    }
+
+    private void RandomSpawn(GameObject obj, List<Transform> locations)
+    {
+        Transform location = locations[Random.Range(0, locations.Count)];
+        GameObject insObj = Instantiate(obj);
+        insObj.transform.position = location.transform.position;
     }
 }
