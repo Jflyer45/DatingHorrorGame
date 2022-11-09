@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 150
+  controlID: 173
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 183
+  controlID: 126
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 69
+  controlID: 127
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -334,7 +334,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -337246
+  m_LastSelectedObjectID: 35368
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -474,22 +474,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Rust Key/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Rust Key/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Jeremy\Documents\GitHub\DatingHorrorGame\My project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1607}
-    m_SelectedIDs: f2600000
-    m_LastClickedID: 24818
-    m_ExpandedIDs: 00000000dc600000de600000e0600000e2600000e4600000e6600000e8600000ea600000ec600000ee600000f0600000f2600000f4600000f6600000f8600000fa600000fc600000fe60000000610000026100000461000006610000086100000a6100000c6100000e61000010610000126100001461000016610000186100001a6100001c6100001e61000020610000226100002461000026610000286100002a6100002c6100002e6100003061000032610000346100007c76000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 1671}
+    m_SelectedIDs: e2910000
+    m_LastClickedID: 37346
+    m_ExpandedIDs: 00000000dc600000de600000e0600000e2600000e4600000e6600000e8600000ea600000ec600000ee600000f0600000f2600000f4600000f6600000f8600000fa600000fc600000fe60000000610000026100000461000006610000086100000a6100000c6100000e61000010610000126100001461000016610000186100001a6100001c6100001e61000020610000226100002461000026610000286100002a6100002c6100002e610000306100003261000034610000a06100002079000032790000e491000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,7 +608,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 242
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -644,10 +644,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 585}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: eee8ffff9ef7ffff36fbffff1a910000b4910000e29100001e9200004c9200000e970000
+      scrollPos: {x: 0, y: 73}
+      m_SelectedIDs: ce28ffff
+      m_LastClickedID: -55090
+      m_ExpandedIDs: 6c4fffffa0c1ffff54c3ffffa0ccfffffaccffff6ecdfffff0cdffff64ceffffccceffff5acfffff1cd0fffff0d2ffff82d7ffffe8d8ffff36fbffff645300005e89000062890000c4890000468a0000a08a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -929,9 +929,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -14.817821, y: 1.4847734, z: -3.4992306}
+    m_Target: {x: -2.3377776, y: 0.9438765, z: 1.4463103}
     speed: 2
-    m_Value: {x: -14.817821, y: 1.4847734, z: -3.4992306}
+    m_Value: {x: -2.3377776, y: 0.9438765, z: 1.4463103}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -978,9 +978,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.026163822, y: -0.56772405, z: 0.018046185, w: -0.82279086}
+    m_Target: {x: -0.039996896, y: 0.86115974, z: -0.06722239, w: -0.50269246}
     speed: 2
-    m_Value: {x: -0.026159825, y: -0.5676373, z: 0.018043429, w: -0.82266515}
+    m_Value: {x: -0.03928073, y: 0.866211, z: -0.06762463, w: -0.4935205}
   m_Size:
     m_Target: 0.6096132
     speed: 2
