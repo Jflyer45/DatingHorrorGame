@@ -13,6 +13,8 @@ public class HorrorManager : GameManager
     public GameObject key;
     public List<Transform> keyLocations;
 
+    public GameObject rope;
+    public AudioSource ropeSound;
     private bool hasCutRope = false;
 
     void Start()
@@ -34,7 +36,8 @@ public class HorrorManager : GameManager
                 hasCutRope = true;
                 TurnGlassIndicatorOff();
                 playerController.canMove = true;
-                //Play rope cut
+                ropeSound.Play();
+                rope.SetActive(false);
             }
         }
         else
