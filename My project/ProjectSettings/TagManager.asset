@@ -11,6 +11,7 @@ TagManager:
   - BreakableGlass
   - GlassAccessory
   - GlassShard
+  - Key
   layers:
   - Default
   - TransparentFX
