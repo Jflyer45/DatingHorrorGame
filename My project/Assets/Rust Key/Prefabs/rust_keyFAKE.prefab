@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: -2926801459881733268}
   - component: {fileID: -2560601407982008342}
   m_Layer: 0
-  m_Name: rust_key
-  m_TagString: Key
+  m_Name: rust_keyFAKE
+  m_TagString: fakekey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,6 +12,7 @@ TagManager:
   - GlassAccessory
   - GlassShard
   - Key
+  - fakekey
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class HorrorManager : GameManager
     public GameObject itemHolder;
     public TMP_Text cutRopeIndicator;
     public GameObject key;
+    public GameObject fakeKey;
     public List<Transform> keyLocations;
 
     public GameObject rope;
@@ -116,12 +117,17 @@ public class HorrorManager : GameManager
     private void SetUpItems()
     {
         RandomSpawn(key, keyLocations);
+        RandomSpawn(fakeKey, keyLocations);
+        RandomSpawn(fakeKey, keyLocations);
+        RandomSpawn(fakeKey, keyLocations);
+        RandomSpawn(fakeKey, keyLocations);
     }
 
     private void RandomSpawn(GameObject obj, List<Transform> locations)
     {
-        Transform location = locations[Random.Range(0, locations.Count)];
+        int randomIndex = Random.Range(0, locations.Count);
         GameObject insObj = Instantiate(obj);
-        insObj.transform.position = location.transform.position;
+        insObj.transform.position = locations[randomIndex].transform.position;
+        locations.RemoveAt(randomIndex);
     }
 }
