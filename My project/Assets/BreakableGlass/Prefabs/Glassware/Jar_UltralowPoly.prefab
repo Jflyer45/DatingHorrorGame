@@ -116,6 +116,7 @@ MonoBehaviour:
   - {fileID: 1000012823852274, guid: 5a2bb90422643364eb50b7a4532a069b, type: 3}
   - {fileID: 1000012273056720, guid: fd3c10b7afd50a44d8e22153335b7319, type: 3}
   BreakOnCollision: 0
+  CollisionTags: []
   SpeedRequiredToBreak: 0
   CleanUpShards: 1
   MinShardLife: 3
