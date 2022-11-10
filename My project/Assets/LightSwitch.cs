@@ -8,7 +8,6 @@ public class LightSwitch : MonoBehaviour
     bool canSwitch = false;
     public List<Light> connectedLights;
 
-
     // Start is called before the first frame update
     void Start()
     {
