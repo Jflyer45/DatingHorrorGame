@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class KeyDoor : MonoBehaviour
 {
     public bool isLocked = true;
     public AudioClip doorCreak;
     public AudioClip lockedShutter;
-
+    public TMP_Text indicator;
     private AudioSource AS;
 
     void Start()
@@ -33,7 +33,17 @@ public class KeyDoor : MonoBehaviour
         {
             AS.clip = lockedShutter;
             AS.Play();
-            // indicator 
+            indicator.gameObject.SetActive(true);
+            indicator.text = "Wrong key...";
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag.ToLower() == "fakekey")
+        {
+            indicator.gameObject.SetActive(false);
+            indicator.text = "";
         }
     }
 }
