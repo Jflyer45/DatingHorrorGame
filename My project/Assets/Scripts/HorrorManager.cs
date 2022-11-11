@@ -20,6 +20,7 @@ public class HorrorManager : GameManager
 
     void Start()
     {
+        this.jumpscareActive = true;
         SetUpItems();
         TurnGlassIndicatorOff();
         playerController.canMove = false;

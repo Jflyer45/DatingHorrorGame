@@ -24,9 +24,11 @@ public class Jumpscare : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("asdf");
         Debug.Log(GM.jumpscareActive);
-        if (GM.jumpscareActive && other.tag == "Player")
+        if (GM.jumpscareActive && other.tag.ToLower() == "player")
         {
+            Debug.Log("SCARE");
             videoPlayer.Play();
             MC.PauseMusic();
             AS.Play();
