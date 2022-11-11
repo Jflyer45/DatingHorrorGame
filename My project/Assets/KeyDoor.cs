@@ -5,9 +5,14 @@ using UnityEngine;
 public class KeyDoor : MonoBehaviour
 {
     public bool isLocked = true;
+    public AudioClip doorCreak;
+    public AudioClip lockedShutter;
+
+    private AudioSource AS;
+
     void Start()
     {
-        
+        AS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,6 +26,14 @@ public class KeyDoor : MonoBehaviour
         {
             isLocked = false;
             transform.eulerAngles = new Vector3(0, 92, 0);
+            AS.clip = doorCreak;
+            AS.Play();
+        }
+        if(other.tag.ToLower() == "fakekey")
+        {
+            AS.clip = lockedShutter;
+            AS.Play();
+            // indicator 
         }
     }
 }
