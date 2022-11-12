@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HorrorBasement.unity
     guid: b4e06189d2ab1d74c9abb1ece5b7e4ed
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 4ca5c065613388c45a415c2a3f96a445
   m_configObjects: {}

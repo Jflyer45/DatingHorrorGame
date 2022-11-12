@@ -10,6 +10,7 @@ public class SceneLoaderUtils : MonoBehaviour
         public const int Erik = 2;
         public const int Bowling = 3;
         public const int HorrorBasement = 4;
+        public const int Win = 5;
     }
 
     public static void ChangeScene(int scene)
