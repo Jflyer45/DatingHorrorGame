@@ -2,31 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProfile
+public class PlayerProfile : MonoBehaviour
 {
     static PlayerProfile instance;
     public string playerName;
     public string favColor;
     public string getAway;
 
-    public static void SetName(string name)
+    private void Awake()
     {
-        PlayerPrefs.SetString("name", name);
+        if(instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
-    public static string GetName()
+    public void ChangeName()
     {
-        return PlayerPrefs.GetString("name");
+        //playerName = s;
     }
-
-    public static void SetFavoriteColor(string fav)
-    {
-        PlayerPrefs.SetString("favoriteColor", fav);
-    }
-
-    public static string GetFavoriteColor()
-    {
-        return PlayerPrefs.GetString("favoriteColor");
-    }
-
 }
