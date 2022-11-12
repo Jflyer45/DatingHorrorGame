@@ -15,6 +15,8 @@ public class Jumpscare : MonoBehaviour
     public VideoPlayer videoPlayer;
     public MusicController MC;
 
+    public float waitTime = 4;
+
     private void Awake()
     {
         navigation = GetComponent<Navigation>();
@@ -48,7 +50,7 @@ public class Jumpscare : MonoBehaviour
 
     IEnumerator SwitchScenes()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(waitTime);
         SceneLoaderUtils.ChangeScene(SceneLoaderUtils.Scene.HorrorBasement);
     }
 }
