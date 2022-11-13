@@ -14,6 +14,7 @@ public class HorrorManager : GameManager
     public GameObject fakeKey;
     public List<Transform> keyLocations;
 
+    public float gracePeriod = 15f;
     public GameObject rope;
     public AudioSource ropeSound;
     private bool hasCutRope = false;
@@ -72,7 +73,7 @@ public class HorrorManager : GameManager
         }
 
         //Grace time
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(gracePeriod);
 
         //He returns
         CommandLocation("Laundry");

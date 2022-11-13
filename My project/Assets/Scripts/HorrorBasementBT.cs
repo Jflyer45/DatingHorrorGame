@@ -24,15 +24,41 @@ public class HorrorBasementBT : MonoBehaviour
         if (fov.canSeePlayer) { ThisTask.Succeed(); } else { ThisTask.Fail(); }
     }
 
+
+    public float cooldown = 3f;
+    private float cooldownReset = 3f;
+    public bool currentlyChasing = false;
     [Task]
     void ChasePlayer()
     {
+        currentlyChasing = true;
         dateNav.ChasePlayer();
         if (!fov.canSeePlayer)
         {
-            dateNav.TESTATTACKPLAYER = false;
-            ThisTask.Fail();
+            Debug.Log(Time.deltaTime);
+            cooldown = cooldown - Time.deltaTime;
+            if(cooldown <= 0)
+            {
+                Debug.Log("Cool down out" + cooldown);
+                dateNav.TESTATTACKPLAYER = false;
+                cooldown = cooldownReset;
+                currentlyChasing = false;
+                ThisTask.Fail();
+            }
+
         }
+        else
+        {
+            cooldown = cooldownReset;
+        }
+    }
+
+    [Task]
+    bool CanSeeOrChasing()
+    {
+        bool chasing = currentlyChasing;
+        bool canSee = fov.canSeePlayer;
+        if (canSee || chasing) { ThisTask.Succeed(); return true; } else { ThisTask.Fail(); return false; }
     }
 
     [Task]

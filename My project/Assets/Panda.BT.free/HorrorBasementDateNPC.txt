@@ -1,6 +1,6 @@
 tree("root")
 	fallback
-		while not CanSeePlayer
+		while not CanSeeOrChasing
 			tree("Patrol")
 		tree("ChasePlayer")
 
