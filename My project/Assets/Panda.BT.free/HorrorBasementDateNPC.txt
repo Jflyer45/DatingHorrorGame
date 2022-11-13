@@ -6,6 +6,35 @@ tree("root")
 
 tree("Patrol")
 	sequence
+		random
+			tree("ClockwisePatrol")
+			tree("CounterClockwisePatrol")
+		random
+			MoveTo("Bathroom")
+			MoveTo("TableRoom")
+			MoveTo("TVRoom")
+			MoveTo("BedRoom")
+			MoveTo("SpawnRoom")
+			MoveTo("ExitDoor")
+		Succeed
+
+tree("ChasePlayer")
+	sequence
+		ChasePlayer()
+
+tree("ClockwisePatrol")
+	sequence
+		MoveTo("CloseLeftCorner")
+		Wait 0.5
+		MoveTo("FarLeftCorner")
+		Wait 0.5
+		MoveTo("FarRightCorner")
+		Wait 0.5
+		MoveTo("CloseRightCorner")
+		Succeed
+
+tree("CounterClockwisePatrol")
+	sequence
 		MoveTo("CloseRightCorner")
 		Wait 0.5
 		MoveTo("FarRightCorner")
@@ -14,7 +43,3 @@ tree("Patrol")
 		Wait 0.5
 		MoveTo("CloseLeftCorner")
 		Succeed
-
-tree("ChasePlayer")
-	sequence
-		ChasePlayer()
