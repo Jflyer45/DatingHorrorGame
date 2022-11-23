@@ -15,8 +15,8 @@ MonoBehaviour:
   displayText: Oh! You're finally here! Hey my name is Shaun Striker.
   optionsText:
   - Nice to meet you.
-  - You look different from your profile
-  - I'm ready to destroy you in bowling
+  - You look different from your profile...
+  - I'm ready to destroy you in bowling!
   optionDialogue:
   - {fileID: 11400000, guid: 7bdfd849e63537b45bea707517e9f79f, type: 2}
   - {fileID: 11400000, guid: 7757cbf64ab741a4db24574a19b20cec, type: 2}
