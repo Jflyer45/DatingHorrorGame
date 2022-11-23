@@ -7,11 +7,12 @@ public class LightSwitch : MonoBehaviour
     public TMP_Text indicator;
     bool canSwitch = false;
     public List<Light> connectedLights;
+    private AudioSource AS;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        AS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,7 +20,8 @@ public class LightSwitch : MonoBehaviour
     {
         if (canSwitch && Input.GetKeyDown(KeyCode.F))
         {
-            foreach(Light light in connectedLights)
+            LighSwitchNoise();
+            foreach (Light light in connectedLights)
             {
                 light.gameObject.SetActive(!light.gameObject.activeSelf);
             }
@@ -44,5 +46,10 @@ public class LightSwitch : MonoBehaviour
             indicator.text = "";
             indicator.gameObject.SetActive(false);
         }
+    }
+
+    private void LighSwitchNoise()
+    {
+        AS.Play();
     }
 }
