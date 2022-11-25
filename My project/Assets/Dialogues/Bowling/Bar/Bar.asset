@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: So what are you going to drink?
   optionsText:
-  - I'm here for a good time, aren't I? Something strong.
-  - Something non-alcoholic
-  - I'm not thirsty
+  - I'll take some wine.
+  - Shot of something strong.
+  - A water is fine for now.
   optionDialogue:
-  - {fileID: 11400000, guid: 2047ed43913132947a2ae8c64a20ee1f, type: 2}
+  - {fileID: 11400000, guid: 902201e1eaac01b49878924a91ed20a8, type: 2}
   - {fileID: 11400000, guid: c6a8e358ca481d444ada9d51e93ea613, type: 2}
   - {fileID: 11400000, guid: c6a8e358ca481d444ada9d51e93ea613, type: 2}
   nextDialogue: {fileID: 0}
@@ -33,6 +33,6 @@ MonoBehaviour:
   CommandKeyChoice2:
   - Mood
   CommandValueChoice2:
-  - -1
+  - -2
   CommandAlwaysKey: []
   CommandAlwaysValue: []

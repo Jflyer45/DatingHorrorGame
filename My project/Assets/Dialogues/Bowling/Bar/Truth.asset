@@ -10,9 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
-  m_Name: BarNonAlcoholic
+  m_Name: Truth
   m_EditorClassIdentifier: 
-  displayText: Oh well suit yourself . . .
+  displayText: Cool, cool.
   optionsText: []
   optionDialogue: []
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 51e64a3e51e59c043bf18764127f8630, type: 2}
+  CommandKeyChoice0: []
+  CommandValueChoice0: []
+  CommandKeyChoice1: []
+  CommandValueChoice1: []
+  CommandKeyChoice2: []
+  CommandValueChoice2: []
+  CommandAlwaysKey: []
+  CommandAlwaysValue: []
