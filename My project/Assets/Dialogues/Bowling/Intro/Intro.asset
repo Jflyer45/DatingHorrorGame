@@ -18,7 +18,7 @@ MonoBehaviour:
   - You look different from your profile...
   - I'm ready to destroy you in bowling!
   optionDialogue:
-  - {fileID: 11400000, guid: 7bdfd849e63537b45bea707517e9f79f, type: 2}
+  - {fileID: 11400000, guid: 823affac936a0314d81d00027f08440f, type: 2}
   - {fileID: 11400000, guid: 7757cbf64ab741a4db24574a19b20cec, type: 2}
   - {fileID: 11400000, guid: 7ecc29477a05cfd408a80156631b7196, type: 2}
   nextDialogue: {fileID: 0}

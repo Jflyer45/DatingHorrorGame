@@ -15,18 +15,20 @@ MonoBehaviour:
   displayText: Hey, so before we play do you want to go get some drinks?
   optionsText:
   - Sure!
+  - No, let's start playing right away.
+  - Let's get some music going first.
   optionDialogue:
   - {fileID: 0}
   nextDialogue: {fileID: 0}
-  CommandKeyChoice0: []
-  CommandValueChoice0: []
+  CommandKeyChoice0:
+  - NextDialogueIndex
+  - Location
+  CommandValueChoice0:
+  - 1
+  - Bar
   CommandKeyChoice1: []
   CommandValueChoice1: []
   CommandKeyChoice2: []
   CommandValueChoice2: []
-  CommandAlwaysKey:
-  - NextDialogueIndex
-  - Location
-  CommandAlwaysValue:
-  - 1
-  - Bar
+  CommandAlwaysKey: []
+  CommandAlwaysValue: []

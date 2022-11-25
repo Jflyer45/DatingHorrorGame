@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
   m_Name: SoWhat
   m_EditorClassIdentifier: 
-  displayText: 
+  displayText: So what? It's probably just not a busy night.
   optionsText: []
   optionDialogue: []
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 4a97b4f3d5fb01a46ac9927742cbdb79, type: 2}
   CommandKeyChoice0: []
   CommandValueChoice0: []
   CommandKeyChoice1: []

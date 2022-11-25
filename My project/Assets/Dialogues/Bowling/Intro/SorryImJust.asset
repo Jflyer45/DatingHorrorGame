@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
-  m_Name: TellMeAboutYourself
+  m_Name: SorryImJust
   m_EditorClassIdentifier: 
-  displayText: Tell me a little about yourself. What are you currently up to?
+  displayText: Sorry, I'm just a little nervous. I've never have gone on a date before.
   optionsText:
-  - Busy with work.
-  - Still in school
-  - Going with the flow
+  - Don't worry. Let's move on
   optionDialogue:
-  - {fileID: 11400000, guid: 7ef59226c7e6abd4eba10855eb942f05, type: 2}
-  - {fileID: 11400000, guid: 767f44858a5f9884fb28a8a05c7e2763, type: 2}
-  - {fileID: 11400000, guid: 401ac80a2f78daf4ab07bfb2c41cfe80, type: 2}
+  - {fileID: 11400000, guid: 4a97b4f3d5fb01a46ac9927742cbdb79, type: 2}
   nextDialogue: {fileID: 0}
   CommandKeyChoice0: []
   CommandValueChoice0: []

@@ -10,27 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
-  m_Name: AckwardInBetween
+  m_Name: SchoolResponse
   m_EditorClassIdentifier: 
-  displayText: 'So... '
+  displayText: Oh cooutl! I'm a new grad. What are you studying?
   optionsText:
-  - There's not many people here.
-  - So..?
-  - ...
+  - STEM
+  - Art
+  - Focusing on sports
   optionDialogue:
-  - {fileID: 11400000, guid: 42d9be96083339149a115524f6e942e9, type: 2}
-  - {fileID: 11400000, guid: 966801a886c7c9e4e8b685034cd8276d, type: 2}
-  - {fileID: 11400000, guid: 966801a886c7c9e4e8b685034cd8276d, type: 2}
+  - {fileID: 11400000, guid: f848fc5e69c7934479362d354339db0a, type: 2}
+  - {fileID: 11400000, guid: e52b58d69e684354080789ed7823a67b, type: 2}
+  - {fileID: 11400000, guid: f848fc5e69c7934479362d354339db0a, type: 2}
   nextDialogue: {fileID: 0}
   CommandKeyChoice0:
   - Mood
   CommandValueChoice0:
-  - -2
+  - -1
   CommandKeyChoice1:
   - Mood
   CommandValueChoice1:
+  - 1
+  CommandKeyChoice2:
+  - Mood
+  CommandValueChoice2:
   - -1
-  CommandKeyChoice2: []
-  CommandValueChoice2: []
   CommandAlwaysKey: []
   CommandAlwaysValue: []

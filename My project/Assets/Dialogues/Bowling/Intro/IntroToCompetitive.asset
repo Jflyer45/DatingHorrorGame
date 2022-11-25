@@ -16,4 +16,12 @@ MonoBehaviour:
     lose.
   optionsText: []
   optionDialogue: []
-  nextDialogue: {fileID: 11400000, guid: 7bdfd849e63537b45bea707517e9f79f, type: 2}
+  nextDialogue: {fileID: 11400000, guid: 823affac936a0314d81d00027f08440f, type: 2}
+  CommandKeyChoice0: []
+  CommandValueChoice0: []
+  CommandKeyChoice1: []
+  CommandValueChoice1: []
+  CommandKeyChoice2: []
+  CommandValueChoice2: []
+  CommandAlwaysKey: []
+  CommandAlwaysValue: []
