@@ -30,12 +30,16 @@ MonoBehaviour:
   - 6
   CommandKeyChoice1:
   - ChangeSong
+  - NextDialogueIndex
   CommandValueChoice1:
   - 1
+  - 7
   CommandKeyChoice2:
   - ChangeSong
+  - NextDialogueIndex
   CommandValueChoice2:
   - 2
+  - 8
   CommandAlwaysKey:
   - ToggleJukebox
   CommandAlwaysValue:

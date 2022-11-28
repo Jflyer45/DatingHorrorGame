@@ -19,8 +19,8 @@ MonoBehaviour:
   - A water is fine for now.
   optionDialogue:
   - {fileID: 11400000, guid: 902201e1eaac01b49878924a91ed20a8, type: 2}
-  - {fileID: 11400000, guid: c6a8e358ca481d444ada9d51e93ea613, type: 2}
-  - {fileID: 11400000, guid: c6a8e358ca481d444ada9d51e93ea613, type: 2}
+  - {fileID: 11400000, guid: af7eec56fbc46f0478604bba12df3353, type: 2}
+  - {fileID: 11400000, guid: b71a390165217c047bb4ea50ff74416a, type: 2}
   nextDialogue: {fileID: 0}
   CommandKeyChoice0:
   - Mood
@@ -36,3 +36,5 @@ MonoBehaviour:
   - -2
   CommandAlwaysKey: []
   CommandAlwaysValue: []
+  CommandBeforeKey: []
+  CommandBeforeValue: []
