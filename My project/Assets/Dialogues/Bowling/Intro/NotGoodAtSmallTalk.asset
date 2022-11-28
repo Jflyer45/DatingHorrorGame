@@ -12,12 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
   m_Name: NotGoodAtSmallTalk
   m_EditorClassIdentifier: 
-  displayText: 
-  optionsText: []
-  optionDialogue: []
+  displayText: I'm sorry, just not good at small talk.
+  optionsText:
+  - Don't worry. Tell me about your self.
+  - Let's just get on with it.
+  optionDialogue:
+  - {fileID: 11400000, guid: 4a97b4f3d5fb01a46ac9927742cbdb79, type: 2}
+  - {fileID: 11400000, guid: 7bdfd849e63537b45bea707517e9f79f, type: 2}
   nextDialogue: {fileID: 0}
-  CommandKeyChoice0: []
-  CommandValueChoice0: []
+  CommandKeyChoice0:
+  - Mood
+  CommandValueChoice0:
+  - 1
   CommandKeyChoice1: []
   CommandValueChoice1: []
   CommandKeyChoice2: []
