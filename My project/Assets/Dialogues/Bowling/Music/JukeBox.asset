@@ -24,16 +24,21 @@ MonoBehaviour:
   nextDialogue: {fileID: 0}
   CommandKeyChoice0:
   - ChangeSong
+  - NextDialogueIndex
   CommandValueChoice0:
   - 0
+  - 6
   CommandKeyChoice1:
-  - 
-  CommandValueChoice1: []
-  CommandKeyChoice2: []
-  CommandValueChoice2: []
+  - ChangeSong
+  CommandValueChoice1:
+  - 1
+  CommandKeyChoice2:
+  - ChangeSong
+  CommandValueChoice2:
+  - 2
   CommandAlwaysKey:
   - ToggleJukebox
-  - NextDialogueIndex
   CommandAlwaysValue:
   - false
-  - 6
+  CommandBeforeKey: []
+  CommandBeforeValue: []

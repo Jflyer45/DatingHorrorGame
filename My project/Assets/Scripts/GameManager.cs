@@ -154,10 +154,8 @@ public class GameManager : MonoBehaviour
         }
         if (commands.ContainsKey("ToggleJukebox"))
         {
-            Debug.Log("Command for jukebox");
             if (commands["ToggleJukebox"] == "true")
             {
-                Debug.Log("jukebox was eabled");
                 jukebox.EnableJukebox();
             }
             else
@@ -175,6 +173,12 @@ public class GameManager : MonoBehaviour
 
         if (d != null)
         {
+            Dictionary<string, string> beforeCommands = new Dictionary<string, string>();
+            for (int i = 0; i < d.CommandBeforeKey.Count; i++)
+            {
+                beforeCommands.Add(d.CommandBeforeKey[i], d.CommandBeforeValue[i]);
+            }
+            DeceiverDialogueCommand(beforeCommands);
             dm.StartDialogue(d);
             return true;
         }

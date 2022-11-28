@@ -18,4 +18,7 @@ public class Dialogue : ScriptableObject
 
     public List<string> CommandAlwaysKey;
     public List<string> CommandAlwaysValue;
+
+    public List<string> CommandBeforeKey;
+    public List<string> CommandBeforeValue;
 }

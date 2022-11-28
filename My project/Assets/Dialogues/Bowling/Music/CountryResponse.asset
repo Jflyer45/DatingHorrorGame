@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
-  m_Name: RapResponse
+  m_Name: CountryResponse
   m_EditorClassIdentifier: 
-  displayText: Uhg... you really life this crap?
+  displayText: Serously?
   optionsText: []
   optionDialogue: []
   nextDialogue: {fileID: 0}
