@@ -15391,7 +15391,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horrorClip: {fileID: 8300000, guid: 499b829af0724ec48b52bb0a118abcf2, type: 3}
   songs:
+  - {fileID: 8300000, guid: fb462dc95ec3d4645a886a05312b5c2b, type: 3}
   - {fileID: 8300000, guid: 493de4b9f7824994cb5128a7b02d3ff0, type: 3}
+  - {fileID: 8300000, guid: c642e24ef22d99c448a108fc59db0cee, type: 3}
 --- !u!82 &1318713142
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19585,7 +19587,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709002044}
-  m_LocalRotation: {x: -0.009375257, y: -0.036781717, z: 0.01478857, w: 0.9991699}
+  m_LocalRotation: {x: -0.00937526, y: -0.036781717, z: 0.014788573, w: 0.9991699}
   m_LocalPosition: {x: -0.05342067, y: -0.000000022351742, z: 0.000000056810677}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999917}
   m_ConstrainProportionsScale: 0

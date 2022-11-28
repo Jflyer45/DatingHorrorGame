@@ -15,8 +15,8 @@ MonoBehaviour:
   displayText: (The jukebox buzzs ready for your selection)
   optionsText:
   - Country
-  - Rap
   - Pop
+  - Jazz
   optionDialogue:
   - {fileID: 0}
   - {fileID: 0}
