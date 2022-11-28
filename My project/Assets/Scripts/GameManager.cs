@@ -169,7 +169,9 @@ public class GameManager : MonoBehaviour
         }
         if (commands.ContainsKey("CompleteMusic"))
         {
+            Debug.Log("completed music section");
             MusicSectionComplete = true;
+            dm.ChangeDialouge(DynamicWhatsNextDialogue(), true);
         }
         if (commands.ContainsKey("CompleteBar"))
         {
@@ -179,6 +181,38 @@ public class GameManager : MonoBehaviour
         {
             BowlingSectionComplete = true;
         }
+    }
+
+    private Dialogue DynamicWhatsNextDialogue()
+    {
+        Dialogue dynamicDialogue = ScriptableObject.CreateInstance<Dialogue>();
+        dynamicDialogue.displayText = "So what's next?";
+        if (!MusicSectionComplete)
+        {
+            dynamicDialogue.optionsText[0] = "Let's put on some music.";
+            dynamicDialogue.CommandKeyChoice0.Add("NextDialogueIndex");
+            dynamicDialogue.CommandValueChoice0.Add("4");
+            dynamicDialogue.CommandKeyChoice0.Add("Location");
+            dynamicDialogue.CommandValueChoice0.Add("Jukebox");
+        }
+        if (!BowlingSectionComplete)
+        {
+            dynamicDialogue.optionsText[1] = "Let's go bowl.";
+            dynamicDialogue.CommandKeyChoice1.Add("NextDialogueIndex");
+            dynamicDialogue.CommandValueChoice1.Add("5");
+            dynamicDialogue.CommandKeyChoice1.Add("Location");
+            dynamicDialogue.CommandValueChoice1.Add("BarToLane");
+        }
+        if (!BarSectionComplete)
+        {
+            dynamicDialogue.optionsText[2] = "Let's go get some drinks.";
+            dynamicDialogue.CommandKeyChoice2.Add("NextDialogueIndex");
+            dynamicDialogue.CommandValueChoice2.Add("1");
+            dynamicDialogue.CommandKeyChoice2.Add("Location");
+            dynamicDialogue.CommandValueChoice2.Add("Bar");
+        }
+
+        return dynamicDialogue;
     }
 
     // returns true if dialogue was served, else false if no dialogue available.

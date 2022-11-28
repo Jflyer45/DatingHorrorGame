@@ -21,4 +21,24 @@ public class Dialogue : ScriptableObject
 
     public List<string> CommandBeforeKey;
     public List<string> CommandBeforeValue;
+
+    public Dialogue()
+    {
+        displayText = "";
+        optionsText = new string[3];
+        optionDialogue = new Dialogue[3];
+
+        CommandKeyChoice0 = new List<string>();
+        CommandValueChoice0 = new List<string>();
+        CommandKeyChoice1 = new List<string>();
+        CommandValueChoice1 = new List<string>();
+        CommandKeyChoice2 = new List<string>();
+        CommandValueChoice2 = new List<string>();
+
+        CommandAlwaysKey = new List<string>();
+        CommandAlwaysValue = new List<string>();
+
+        CommandBeforeKey = new List<string>();
+        CommandBeforeValue = new List<string>();
+    }
 }

@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: CountryResponse
   m_EditorClassIdentifier: 
   displayText: Serously?
-  optionsText: []
-  optionDialogue: []
+  optionsText:
+  - ...
+  optionDialogue:
+  - {fileID: 0}
   nextDialogue: {fileID: 0}
-  CommandKeyChoice0: []
-  CommandValueChoice0: []
+  CommandKeyChoice0:
+  - CompleteMusic
+  CommandValueChoice0:
+  - 
   CommandKeyChoice1: []
   CommandValueChoice1: []
   CommandKeyChoice2: []

@@ -13,19 +13,21 @@ MonoBehaviour:
   m_Name: JazzResponse
   m_EditorClassIdentifier: 
   displayText: Oh yeah, Jazz is the best!
-  optionsText: []
-  optionDialogue: []
+  optionsText:
+  - Absolutely!
+  optionDialogue:
+  - {fileID: 0}
   nextDialogue: {fileID: 0}
-  CommandKeyChoice0: []
-  CommandValueChoice0: []
+  CommandKeyChoice0:
+  - CompleteMusic
+  CommandValueChoice0:
+  - 
   CommandKeyChoice1: []
   CommandValueChoice1: []
   CommandKeyChoice2: []
   CommandValueChoice2: []
-  CommandAlwaysKey:
-  - CompleteMusic
-  CommandAlwaysValue:
-  - 
+  CommandAlwaysKey: []
+  CommandAlwaysValue: []
   CommandBeforeKey:
   - Mood
   CommandBeforeValue:

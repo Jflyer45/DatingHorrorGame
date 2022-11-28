@@ -85,8 +85,16 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("Ending Dialgoye");
             EndDialogue();
         }
+    }
+
+    private bool overrideDialouge = false;
+    public void ChangeDialouge(Dialogue dialogue, bool OVERRIDE)
+    {
+        ChangeDialouge(dialogue);
+        overrideDialouge = OVERRIDE;
     }
 
     private void SetUpOptionButtons() 
@@ -132,7 +140,14 @@ public class DialogueManager : MonoBehaviour
         // Notify GM
         gm.ReceivePlayerChoice(i, currentDialogue);
 
-        ChangeDialouge(currentDialogue.optionDialogue[i]);
+        if (!overrideDialouge)
+        {
+            ChangeDialouge(currentDialogue.optionDialogue[i]);
+        }
+        else
+        {
+            overrideDialouge = false;
+        }
     }
 
     private void EnableCursor()
