@@ -7,6 +7,7 @@ public class JukeBox : MonoBehaviour
 {
     public TMP_Text rangeIndicator;
     bool inRange = false;
+    private bool isEnabled = false;
     public GameManager gm;
 
     // Start is called before the first frame update
@@ -14,10 +15,20 @@ public class JukeBox : MonoBehaviour
     {
     }
 
+    public void EnableJukebox()
+    {
+        isEnabled = true;
+    }
+
+    public void DisableJukebox()
+    {
+        isEnabled = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (inRange && Input.GetKeyDown(KeyCode.F))
+        if (isEnabled && inRange && Input.GetKeyDown(KeyCode.F))
         {
             gm.ServeDialogue("jukebox");
             DisableUI();
@@ -36,7 +47,7 @@ public class JukeBox : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //TODO do not allow interaction if NPC is moving.
-        if (other.tag == "Player")
+        if (isEnabled && other.tag == "Player")
         {
             EnableUI();
             inRange = true;

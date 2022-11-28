@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public MusicController MC;
     public GameObject bowlingBall;
     public FPSController playerController;
+    public JukeBox jukebox;
 
     public bool jumpscareActive = false;
     protected bool dateNPCMoving = false;
@@ -150,6 +151,19 @@ public class GameManager : MonoBehaviour
         if (commands.ContainsKey("ChangeSong"))
         {
             MC.ChangeSong(Int32.Parse(commands["ChangeSong"]));
+        }
+        if (commands.ContainsKey("ToggleJukebox"))
+        {
+            Debug.Log("Command for jukebox");
+            if (commands["ToggleJukebox"] == "true")
+            {
+                Debug.Log("jukebox was eabled");
+                jukebox.EnableJukebox();
+            }
+            else
+            {
+                jukebox.DisableJukebox();
+            }
         }
     }
 

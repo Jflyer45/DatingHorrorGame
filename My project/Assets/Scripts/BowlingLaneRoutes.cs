@@ -10,6 +10,7 @@ public class BowlingLaneRoutes : Routes, IRoutes
     public List<Transform> BarToLane;
     public List<Transform> Bar;
     public List<Transform> BowlingBall;
+    public List<Transform> Jukebox;
 
     public override Dictionary<string, List<Transform>> GetRoutes()
     {
@@ -20,6 +21,7 @@ public class BowlingLaneRoutes : Routes, IRoutes
         dic.Add("BarToLane", BarToLane);
         dic.Add("Bar", Bar);
         dic.Add("BowlingBall", BowlingBall);
+        dic.Add("Jukebox", Jukebox);
         return dic;
     }
 }

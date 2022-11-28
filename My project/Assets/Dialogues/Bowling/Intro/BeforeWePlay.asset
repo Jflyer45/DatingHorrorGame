@@ -19,6 +19,8 @@ MonoBehaviour:
   - Let's get some music going first.
   optionDialogue:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   nextDialogue: {fileID: 0}
   CommandKeyChoice0:
   - NextDialogueIndex
@@ -26,9 +28,17 @@ MonoBehaviour:
   CommandValueChoice0:
   - 1
   - Bar
-  CommandKeyChoice1: []
-  CommandValueChoice1: []
-  CommandKeyChoice2: []
-  CommandValueChoice2: []
+  CommandKeyChoice1:
+  - NextDialogueIndex
+  - Location
+  CommandValueChoice1:
+  - 5
+  - BarToLane
+  CommandKeyChoice2:
+  - NextDialogueIndex
+  - Location
+  CommandValueChoice2:
+  - 4
+  - Jukebox
   CommandAlwaysKey: []
   CommandAlwaysValue: []

@@ -31,5 +31,9 @@ MonoBehaviour:
   CommandValueChoice1: []
   CommandKeyChoice2: []
   CommandValueChoice2: []
-  CommandAlwaysKey: []
-  CommandAlwaysValue: []
+  CommandAlwaysKey:
+  - ToggleJukebox
+  - NextDialogueIndex
+  CommandAlwaysValue:
+  - false
+  - 6
