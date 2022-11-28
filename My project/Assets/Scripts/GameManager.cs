@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     private bool lostRepour = false;
     private bool dialoguePast = false;
 
+    private bool MusicSectionComplete = false;
+    private bool BarSectionComplete = false;
+    private bool BowlingSectionComplete = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -162,6 +166,18 @@ public class GameManager : MonoBehaviour
             {
                 jukebox.DisableJukebox();
             }
+        }
+        if (commands.ContainsKey("CompleteMusic"))
+        {
+            MusicSectionComplete = true;
+        }
+        if (commands.ContainsKey("CompleteBar"))
+        {
+            BarSectionComplete = true;
+        }
+        if (commands.ContainsKey("CompleteBowling"))
+        {
+            BowlingSectionComplete = true;
         }
     }
 

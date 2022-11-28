@@ -22,8 +22,10 @@ MonoBehaviour:
   CommandValueChoice1: []
   CommandKeyChoice2: []
   CommandValueChoice2: []
-  CommandAlwaysKey: []
-  CommandAlwaysValue: []
+  CommandAlwaysKey:
+  - CompleteMusic
+  CommandAlwaysValue:
+  - 
   CommandBeforeKey:
   - Mood
   CommandBeforeValue:
