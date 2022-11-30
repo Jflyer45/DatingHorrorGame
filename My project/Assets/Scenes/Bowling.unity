@@ -1007,6 +1007,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9cd256b025383244090d3722690c43b9, type: 2}
   - {fileID: 11400000, guid: c550cba6ba2af804784dc602a409065b, type: 2}
   - {fileID: 11400000, guid: 2251b71cdd7148c4a95d40dde34c2f03, type: 2}
+  - {fileID: 11400000, guid: f097ba0b0d3a1e545a7a676c890e628e, type: 2}
+  - {fileID: 11400000, guid: 98cbc8a7d84d53d4eb5d1c8f43714efa, type: 2}
+  - {fileID: 11400000, guid: c0374a20495dc074fa7762e58aaa9f8f, type: 2}
+  - {fileID: 11400000, guid: b4239bec856364742b4e8f30b0c0a6a7, type: 2}
   player: {fileID: 1528559077}
   attackDialogue: {fileID: 11400000, guid: c1407f559ddfbb047bf952d9ad372f1e, type: 2}
   MC: {fileID: 1318713141}
@@ -2697,8 +2701,9 @@ MonoBehaviour:
   - {fileID: 1708093876}
   - {fileID: 1401185011}
   - {fileID: 565523079}
+  gm: {fileID: 107471901}
   ballInPlay: 0
-  timer: 0
+  timer: 7.5
 --- !u!65 &264038292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19587,7 +19592,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709002044}
-  m_LocalRotation: {x: -0.00937526, y: -0.036781717, z: 0.014788573, w: 0.9991699}
+  m_LocalRotation: {x: -0.009375323, y: -0.036781717, z: 0.014788635, w: 0.9991699}
   m_LocalPosition: {x: -0.05342067, y: -0.000000022351742, z: 0.000000056810677}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999917}
   m_ConstrainProportionsScale: 0

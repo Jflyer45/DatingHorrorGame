@@ -8,6 +8,7 @@ public class BowlingLaneManger : MonoBehaviour
     public Transform ballReturnPoint;
     public float targetTime = 10;
     public List<BowlingPin> pins;
+    public GameManager gm;
 
     public bool ballInPlay;
     public float timer;
@@ -28,9 +29,16 @@ public class BowlingLaneManger : MonoBehaviour
             score += PinsDown();
             ResetPins();
 
+            NotifyGMOfScore();
             timer = targetTime;
             ballInPlay = false;
         }
+    }
+
+    public void NotifyGMOfScore()
+    {
+        gm.ReceiveBowlingScore(score);
+        score = 0;
     }
 
     public void BallGuttered(GameObject ball)

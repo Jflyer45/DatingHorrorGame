@@ -10,17 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
-  m_Name: BowlingIntro
+  m_Name: Beginner'sLuck
   m_EditorClassIdentifier: 
-  displayText: So, do you bowl often?
-  optionsText:
-  - Quite often.
-  - A little bit here and there.
-  - Never.
-  optionDialogue:
-  - {fileID: 11400000, guid: 7efc369a80aed934c855ed651e2fa090, type: 2}
-  - {fileID: 11400000, guid: 7efc369a80aed934c855ed651e2fa090, type: 2}
-  - {fileID: 11400000, guid: 7efc369a80aed934c855ed651e2fa090, type: 2}
+  displayText: That was just beginner's luck. Go again, bet you can't do that again.
+  optionsText: []
+  optionDialogue: []
   nextDialogue: {fileID: 0}
   CommandKeyChoice0: []
   CommandValueChoice0: []

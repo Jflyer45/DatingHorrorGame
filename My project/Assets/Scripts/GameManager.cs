@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     private bool BarSectionComplete = false;
     private bool BowlingSectionComplete = false;
 
+    private int bowlingScore;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -276,5 +278,39 @@ public class GameManager : MonoBehaviour
     public void StartBowling()
     {
         dateNPCNav.PickUpItem(bowlingBall);
+    }
+
+    private bool firstBowl = true;
+    public void ReceiveBowlingScore(int score)
+    {
+        //PROPBABLY NEEDS AN UNCLOCKED BOOL
+        if (!BowlingSectionComplete)
+        {
+            bowlingScore = score;
+
+            if (firstBowl)
+            {
+                firstBowl = false;
+                if (score != 10)
+                {
+                    dateNPCDialogueIndex = 9;
+                }
+                else
+                {
+                    dateNPCDialogueIndex = 10;
+                }
+            }
+            else
+            {
+                if (score != 10)
+                {
+                    dateNPCDialogueIndex = 11;
+                }
+                else
+                {
+                    dateNPCDialogueIndex = 12;
+                }
+            }
+        }
     }
 }

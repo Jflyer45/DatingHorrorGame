@@ -23,9 +23,13 @@ public class DateNPC : NPC
     public void ChangeMoodLevel(int amount)
     {
         int newLevel = moodLevel + amount;
-        if (newLevel >= 4 || newLevel <= -4)
+        if (newLevel >= 4)
         {
-            moodLevel = 0;
+            moodLevel = 3;
+        }
+        else if (newLevel <= -4)
+        {
+            moodLevel = -3;
         }
         else
         {
