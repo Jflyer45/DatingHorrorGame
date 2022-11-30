@@ -14,11 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: So, do you bowl often?
   optionsText:
-  - Quite often.
-  - A little bit here and there.
   - Never.
+  - A little bit here and there.
   optionDialogue:
-  - {fileID: 11400000, guid: 7efc369a80aed934c855ed651e2fa090, type: 2}
   - {fileID: 11400000, guid: 7efc369a80aed934c855ed651e2fa090, type: 2}
   - {fileID: 11400000, guid: 7efc369a80aed934c855ed651e2fa090, type: 2}
   nextDialogue: {fileID: 0}
