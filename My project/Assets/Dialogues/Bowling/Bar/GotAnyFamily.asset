@@ -16,7 +16,9 @@ MonoBehaviour:
   optionsText:
   - Yeah, a few.
   - I'm also a only child.
-  optionDialogue: []
+  optionDialogue:
+  - {fileID: 11400000, guid: 6cc59a87d79b5454eb1c761b458b0ec8, type: 2}
+  - {fileID: 11400000, guid: 6cc59a87d79b5454eb1c761b458b0ec8, type: 2}
   nextDialogue: {fileID: 0}
   CommandKeyChoice0: []
   CommandValueChoice0: []
@@ -26,3 +28,5 @@ MonoBehaviour:
   CommandValueChoice2: []
   CommandAlwaysKey: []
   CommandAlwaysValue: []
+  CommandBeforeKey: []
+  CommandBeforeValue: []

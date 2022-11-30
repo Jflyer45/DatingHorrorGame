@@ -176,10 +176,12 @@ public class GameManager : MonoBehaviour
         if (commands.ContainsKey("CompleteBar"))
         {
             BarSectionComplete = true;
+            dm.ChangeDialouge(DynamicWhatsNextDialogue(), true);
         }
         if (commands.ContainsKey("CompleteBowling"))
         {
             BowlingSectionComplete = true;
+            dm.ChangeDialouge(DynamicWhatsNextDialogue(), true);
         }
     }
 

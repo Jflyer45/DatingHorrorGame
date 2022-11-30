@@ -16,17 +16,25 @@ MonoBehaviour:
   optionsText:
   - Sure.
   - I've had enough.
-  optionDialogue: []
+  optionDialogue:
+  - {fileID: 11400000, guid: c5cdb64b413d9ef48a40cbc556971bdb, type: 2}
+  - {fileID: 11400000, guid: c5cdb64b413d9ef48a40cbc556971bdb, type: 2}
   nextDialogue: {fileID: 0}
   CommandKeyChoice0:
   - Mood
+  - CompleteBar
   CommandValueChoice0:
   - 1
+  - 
   CommandKeyChoice1:
   - Mood
+  - CompleteBar
   CommandValueChoice1:
   - -1
+  - CompleteBar
   CommandKeyChoice2: []
   CommandValueChoice2: []
   CommandAlwaysKey: []
   CommandAlwaysValue: []
+  CommandBeforeKey: []
+  CommandBeforeValue: []

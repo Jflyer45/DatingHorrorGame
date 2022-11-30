@@ -10,22 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
-  m_Name: AnotherDrink
+  m_Name: Excited
   m_EditorClassIdentifier: 
-  displayText: Want another drink?
-  optionsText:
-  - Yes.
-  - No.
-  optionDialogue:
-  - {fileID: 11400000, guid: f843f6808db448f4db15aa9cdcc070b4, type: 2}
-  - {fileID: 11400000, guid: 00db7b25b5dcb394a945857825524e82, type: 2}
-  nextDialogue: {fileID: 0}
+  displayText: Let's go!!!
+  optionsText: []
+  optionDialogue: []
+  nextDialogue: {fileID: 11400000, guid: c0e3018a53204d34cb57d42cab1503b4, type: 2}
   CommandKeyChoice0: []
   CommandValueChoice0: []
-  CommandKeyChoice1:
-  - Mood
-  CommandValueChoice1:
-  - -1
+  CommandKeyChoice1: []
+  CommandValueChoice1: []
   CommandKeyChoice2: []
   CommandValueChoice2: []
   CommandAlwaysKey: []

@@ -22,5 +22,8 @@ MonoBehaviour:
   CommandValueChoice1: []
   CommandKeyChoice2: []
   CommandValueChoice2: []
-  CommandAlwaysKey: []
+  CommandAlwaysKey:
+  - CompleteBar
   CommandAlwaysValue: []
+  CommandBeforeKey: []
+  CommandBeforeValue: []
