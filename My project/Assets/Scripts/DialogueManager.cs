@@ -111,8 +111,17 @@ public class DialogueManager : MonoBehaviour
         int index = 0;
         foreach (string optionText in currentDialogue.optionsText)
         {
-            optionButtons[index].SetActive(true);
-            optionButtons[index].GetComponentInChildren<Text>().text = optionText;
+            if (optionText != "" && optionText != null)
+            {
+                Debug.Log(optionText);
+                optionButtons[index].SetActive(true);
+                optionButtons[index].GetComponentInChildren<Text>().text = optionText;
+            }
+            else
+            {
+                optionButtons[index].SetActive(false);
+                optionButtons[index].GetComponentInChildren<Text>().text = "";
+            }
             index++;
         }
         // Make any unused buttons invisable
