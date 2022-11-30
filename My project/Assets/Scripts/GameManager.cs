@@ -185,6 +185,10 @@ public class GameManager : MonoBehaviour
             BowlingSectionComplete = true;
             dm.ChangeDialouge(DynamicWhatsNextDialogue(), true);
         }
+        if (commands.ContainsKey("EndGame"))
+        {
+            SceneLoaderUtils.ChangeScene(SceneLoaderUtils.Scene.Win);
+        }
     }
 
     private Dialogue DynamicWhatsNextDialogue()
@@ -214,6 +218,14 @@ public class GameManager : MonoBehaviour
             dynamicDialogue.CommandValueChoice2.Add("1");
             dynamicDialogue.CommandKeyChoice2.Add("Location");
             dynamicDialogue.CommandValueChoice2.Add("Bar");
+        }
+
+        if(BarSectionComplete && BowlingSectionComplete && MusicSectionComplete)
+        {
+            dynamicDialogue.displayText = "Wow, this has been a great date! I guess I'll have to see again...";
+            dynamicDialogue.optionsText[0] = "Yeah, totally...";
+            dynamicDialogue.CommandKeyChoice0.Add("EndGame");
+            dynamicDialogue.CommandValueChoice0.Add("");
         }
 
         return dynamicDialogue;
