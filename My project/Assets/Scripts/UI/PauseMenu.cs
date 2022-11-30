@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject phoneUI;
 
+    public bool disablePhone = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -24,7 +26,7 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) && !disablePhone)
         {
             Debug.Log("Pusing p");
             if (phoneUIActive)

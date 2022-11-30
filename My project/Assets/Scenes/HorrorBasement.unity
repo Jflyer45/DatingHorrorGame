@@ -2899,6 +2899,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 661203967094733648, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 716392548386022515, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -3146,6 +3150,10 @@ PrefabInstance:
     - target: {fileID: 3476184568989935406, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526540732645066157, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
+      propertyPath: disablePhone
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4094180727597235662, guid: 531c2ac2dc8ee5c40ac0fdb07b4a9ce5, type: 3}
       propertyPath: m_Layer
@@ -6202,6 +6210,7 @@ MonoBehaviour:
   MC: {fileID: 1147179487}
   bowlingBall: {fileID: 0}
   playerController: {fileID: 988371448}
+  jukebox: {fileID: 0}
   jumpscareActive: 0
   dateFOV: {fileID: 4461853043041393382}
   bt: {fileID: 2182268372998148665}
