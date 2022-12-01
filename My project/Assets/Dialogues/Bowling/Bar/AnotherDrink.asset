@@ -20,8 +20,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f843f6808db448f4db15aa9cdcc070b4, type: 2}
   - {fileID: 11400000, guid: 00db7b25b5dcb394a945857825524e82, type: 2}
   nextDialogue: {fileID: 0}
-  CommandKeyChoice0: []
-  CommandValueChoice0: []
+  CommandKeyChoice0:
+  - IncreaseDrunkLevel
+  CommandValueChoice0:
+  - 
   CommandKeyChoice1:
   - Mood
   CommandValueChoice1:

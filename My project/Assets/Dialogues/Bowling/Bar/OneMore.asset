@@ -23,8 +23,10 @@ MonoBehaviour:
   CommandKeyChoice0:
   - Mood
   - CompleteBar
+  - IncreaseDrunkLevel
   CommandValueChoice0:
   - 1
+  - 
   - 
   CommandKeyChoice1:
   - Mood

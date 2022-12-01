@@ -1017,6 +1017,7 @@ MonoBehaviour:
   bowlingBall: {fileID: 533824433}
   playerController: {fileID: 0}
   jukebox: {fileID: 350897594}
+  drunkController: {fileID: 513159219}
   jumpscareActive: 0
 --- !u!1 &109605482
 GameObject:
@@ -5770,12 +5771,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513159217}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4eeb80d0fdef4b64081ec574f4c33f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: fe9b741021293b14a827b4d4071d53ae, type: 2}
+  material0: {fileID: 2100000, guid: fe9b741021293b14a827b4d4071d53ae, type: 2}
+  material1: {fileID: 2100000, guid: 8601065c0a80e69449f48b29b1fa34dc, type: 2}
+  material2: {fileID: 2100000, guid: dff92b00670e3f04da6c09eb2f6aabf5, type: 2}
 --- !u!1 &516415051
 GameObject:
   m_ObjectHideFlags: 0
@@ -19600,7 +19603,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709002044}
-  m_LocalRotation: {x: -0.0093753375, y: -0.036781717, z: 0.01478865, w: 0.9991699}
+  m_LocalRotation: {x: -0.009375355, y: -0.036781717, z: 0.014788668, w: 0.9991699}
   m_LocalPosition: {x: -0.05342067, y: -0.000000022351742, z: 0.000000056810677}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999917}
   m_ConstrainProportionsScale: 0

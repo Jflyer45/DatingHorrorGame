@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public GameObject bowlingBall;
     public FPSController playerController;
     public JukeBox jukebox;
+    public drunk drunkController;
+
 
     public bool jumpscareActive = false;
     protected bool dateNPCMoving = false;
@@ -188,6 +190,10 @@ public class GameManager : MonoBehaviour
         if (commands.ContainsKey("EndGame"))
         {
             SceneLoaderUtils.ChangeScene(SceneLoaderUtils.Scene.Win);
+        }
+        if (commands.ContainsKey("IncreaseDrunkLevel")) 
+        {
+            drunkController.ChangeDrunkLevel();
         }
     }
 

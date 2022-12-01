@@ -24,12 +24,16 @@ MonoBehaviour:
   nextDialogue: {fileID: 0}
   CommandKeyChoice0:
   - Mood
+  - IncreaseDrunkLevel
   CommandValueChoice0:
   - 1
+  - 
   CommandKeyChoice1:
   - Mood
+  - IncreaseDrunkLevel
   CommandValueChoice1:
   - -1
+  - 
   CommandKeyChoice2:
   - Mood
   CommandValueChoice2:

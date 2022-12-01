@@ -1,6 +1,6 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "Drunk"
+Shader "Drunk2"
 {
 	Properties
 	{
@@ -26,9 +26,9 @@ Shader "Drunk"
 			{
 				vector <float,2> uv = vertex.xy/_ScreenParams.xy;
 				uv.y = 1.0-uv.y;
-				uv.x+=cos(uv.y*2.0+_Time.g)*0.001;
-				uv.y+=sin(uv.x*2.0+_Time.g)*0.001;
-				float offset = sin(_Time.g *0.01) * 0.01;    
+				uv.x+=cos(uv.y*2.0+_Time.g)*0.05;
+				uv.y+=sin(uv.x*2.0+_Time.g)*0.05;
+				float offset = sin(_Time.g *0.5) * 0.01;    
 				float4 a = tex2D(_MainTex,uv);    
 				float4 b = tex2D(_MainTex,uv-float2(sin(offset),0.0));    
 				float4 c = tex2D(_MainTex,uv+float2(sin(offset),0.0));    
