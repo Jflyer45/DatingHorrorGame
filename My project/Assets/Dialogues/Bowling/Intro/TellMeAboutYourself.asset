@@ -22,11 +22,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 767f44858a5f9884fb28a8a05c7e2763, type: 2}
   - {fileID: 11400000, guid: 401ac80a2f78daf4ab07bfb2c41cfe80, type: 2}
   nextDialogue: {fileID: 0}
-  CommandKeyChoice0: []
-  CommandValueChoice0: []
+  CommandKeyChoice0:
+  - Mood
+  CommandValueChoice0:
+  - -1
   CommandKeyChoice1: []
   CommandValueChoice1: []
-  CommandKeyChoice2: []
-  CommandValueChoice2: []
+  CommandKeyChoice2:
+  - Mood
+  CommandValueChoice2:
+  - -2
   CommandAlwaysKey: []
   CommandAlwaysValue: []
+  CommandBeforeKey: []
+  CommandBeforeValue: []
