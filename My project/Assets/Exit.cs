@@ -8,6 +8,7 @@ public class Exit : MonoBehaviour
     {
         if(other.tag.ToLower() == "player")
         {
+            PlayerPrefs.SetString("SeanHorror", "true");
             SceneLoaderUtils.ChangeScene(SceneLoaderUtils.Scene.Win);
         }
     }

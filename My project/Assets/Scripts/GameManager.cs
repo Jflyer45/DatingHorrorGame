@@ -189,6 +189,7 @@ public class GameManager : MonoBehaviour
         }
         if (commands.ContainsKey("EndGame"))
         {
+            PlayerPrefs.SetString("SeanDate", "true");
             SceneLoaderUtils.ChangeScene(SceneLoaderUtils.Scene.Win);
         }
         if (commands.ContainsKey("IncreaseDrunkLevel")) 
