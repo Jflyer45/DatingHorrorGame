@@ -8,7 +8,7 @@ public class Navigation : MonoBehaviour
     // Start is called before the first frame update
     private NavMeshAgent nav;
     private NPC self;
-    [SerializeField] GameObject player;
+    public GameObject player;
     [SerializeField] Routes routes;
     public bool TESTATTACKPLAYER = false;
     [SerializeField] GameManager gm;

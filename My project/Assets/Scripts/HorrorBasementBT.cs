@@ -8,6 +8,7 @@ public class HorrorBasementBT : MonoBehaviour
     private DateNPC dateNPC;
     private Navigation dateNav;
     private FOV fov;
+    public AudioSource chaseMusic;
 
     private bool hasOrderedCommand = false;
     private bool reachedLocation = false;
@@ -33,6 +34,23 @@ public class HorrorBasementBT : MonoBehaviour
     {
         currentlyChasing = true;
         dateNav.ChasePlayer();
+
+        if (!chaseMusic.isPlaying)
+        {
+            chaseMusic.Play();
+        }
+        else
+        {
+            float maxDistance = 100;
+
+            // Volume Shift
+            float distance = Vector3.Distance(dateNPC.gameObject.transform.position, dateNav.player.gameObject.transform.position);
+            float volumeFraction = ((distance-maxDistance)*-1)/ maxDistance;
+
+            Debug.Log(volumeFraction);
+            chaseMusic.volume = volumeFraction;
+        }
+
         if (!fov.canSeePlayer)
         {
             Debug.Log(Time.deltaTime);
@@ -40,6 +58,7 @@ public class HorrorBasementBT : MonoBehaviour
             if(cooldown <= 0)
             {
                 Debug.Log("Cool down out" + cooldown);
+                chaseMusic.Stop();
                 dateNav.TESTATTACKPLAYER = false;
                 cooldown = cooldownReset;
                 currentlyChasing = false;
