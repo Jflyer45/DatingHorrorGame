@@ -4030,7 +4030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010108571142, guid: 91f5fca694e857943a06e5acfa7cd988, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.587
+      value: 1.843
       objectReference: {fileID: 0}
     - target: {fileID: 4000010108571142, guid: 91f5fca694e857943a06e5acfa7cd988, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6296,7 +6296,7 @@ MonoBehaviour:
   - {fileID: 882861168}
   - {fileID: 1368491864}
   - {fileID: 1695525383}
-  gracePeriod: 15
+  gracePeriod: 10
   rope: {fileID: 1489525698}
   ropeSound: {fileID: 1623026005}
 --- !u!4 &722490169
@@ -14813,6 +14813,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525ce456629ce44429cc591a0c14ab79, type: 3}
+--- !u!1 &1533572806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 108044, guid: 525ce456629ce44429cc591a0c14ab79, type: 3}
+  m_PrefabInstance: {fileID: 1533572805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1533572807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533572806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c7fc1c9f0a5df47851725f1c8c8816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 600
+  canHold: 1
+  tempParent: {fileID: 0}
+  isHolding: 0
+  crosshair: {fileID: 0}
+  wasThrown: 0
 --- !u!1001 &1539027614
 PrefabInstance:
   m_ObjectHideFlags: 0

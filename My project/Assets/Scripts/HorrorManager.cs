@@ -64,7 +64,7 @@ public class HorrorManager : GameManager
         {
             yield return null;
         }
-        CommandLocation("BottomOfStairs");
+        CommandLocation("ExitDoor");
         playerController.canMove = false;
 
         while (dateNPCNav.IsMoving())
@@ -92,6 +92,8 @@ public class HorrorManager : GameManager
         else
         {
             //Dialogue to kill you
+            // This until I can come up with something
+            bt.tickOn = BehaviourTree.UpdateOrder.Update;
         }
     }
 
