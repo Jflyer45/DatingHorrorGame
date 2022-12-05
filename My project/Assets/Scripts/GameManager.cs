@@ -196,8 +196,12 @@ public class GameManager : MonoBehaviour
         {
             drunkController.ChangeDrunkLevel();
         }
+        if (commands.ContainsKey("BowlingUnlocked"))
+        {
+            BowlingUnlocked = true;
+        }
     }
-
+    private bool BowlingUnlocked = false;
     private Dialogue DynamicWhatsNextDialogue()
     {
         Dialogue dynamicDialogue = ScriptableObject.CreateInstance<Dialogue>();
@@ -303,7 +307,7 @@ public class GameManager : MonoBehaviour
     public void ReceiveBowlingScore(int score)
     {
         //PROPBABLY NEEDS AN UNCLOCKED BOOL
-        if (!BowlingSectionComplete)
+        if (!BowlingSectionComplete && BowlingUnlocked)
         {
             bowlingScore = score;
 

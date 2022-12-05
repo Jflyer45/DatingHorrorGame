@@ -20,10 +20,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7efc369a80aed934c855ed651e2fa090, type: 2}
   - {fileID: 11400000, guid: 7efc369a80aed934c855ed651e2fa090, type: 2}
   nextDialogue: {fileID: 0}
-  CommandKeyChoice0: []
-  CommandValueChoice0: []
-  CommandKeyChoice1: []
-  CommandValueChoice1: []
+  CommandKeyChoice0:
+  - BowlingUnlocked
+  CommandValueChoice0:
+  - 
+  CommandKeyChoice1:
+  - BowlingUnlocked
+  CommandValueChoice1:
+  - 
   CommandKeyChoice2: []
   CommandValueChoice2: []
   CommandAlwaysKey: []
