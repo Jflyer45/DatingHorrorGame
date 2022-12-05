@@ -12,7 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf6f827b7924a24188bb52c59ea9e67, type: 3}
   m_Name: HorrorEnding
   m_EditorClassIdentifier: 
-  displayText: You know, I'm really sick of you. I'll teach you are lesson.
+  displayText: You know, I'm really sick of you. I'll teach you a lesson.
   optionsText: []
   optionDialogue: []
   nextDialogue: {fileID: 0}
+  CommandKeyChoice0: []
+  CommandValueChoice0: []
+  CommandKeyChoice1: []
+  CommandValueChoice1: []
+  CommandKeyChoice2: []
+  CommandValueChoice2: []
+  CommandAlwaysKey: []
+  CommandAlwaysValue: []
+  CommandBeforeKey: []
+  CommandBeforeValue: []
